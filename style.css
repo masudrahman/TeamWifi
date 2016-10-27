@@ -20,10 +20,7 @@
   { 
   	z-index: 100; 
   	position: absolute; 
-  	margin: 10px 0px 0px 1000px; 
-  	background-color: #fff; 
-  	border: 1px #000 Solid; 
-  	padding: 5px; 
+  	margin: 10px 0px 0px 1075px; 
   }
 
   #map 
