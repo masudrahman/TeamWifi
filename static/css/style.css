@@ -29,3 +29,10 @@
   	height: 100% 
   }
 
+  #wifi
+  {
+    z-index: 100;
+    position: absolute;
+    margin: 10px 0px 0px 500px;
+  }
+
