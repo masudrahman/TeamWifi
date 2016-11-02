@@ -7,6 +7,6 @@ function initialize() {
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 };
 
-$('.message a').click(function(){
+$('#message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
