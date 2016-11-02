@@ -143,7 +143,47 @@
 			"file": "static/index.html",
 			"settings":
 			{
-				"buffer_size": 1017,
+				"buffer_size": 2548,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/settings.html",
+			"settings":
+			{
+				"buffer_size": 1273,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/signout.html",
+			"settings":
+			{
+				"buffer_size": 1273,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/faq.html",
+			"settings":
+			{
+				"buffer_size": 1268,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/history.html",
+			"settings":
+			{
+				"buffer_size": 1831,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/wifi.html",
+			"settings":
+			{
+				"buffer_size": 1275,
 				"line_ending": "Unix"
 			}
 		},
@@ -158,18 +198,18 @@
 			}
 		},
 		{
-			"file": "static/js/materialize.js",
+			"file": "static/css/style.css",
 			"settings":
 			{
-				"buffer_size": 298414,
+				"buffer_size": 492,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "static/css/style.css",
+			"file": "/Users/masudrahman/Code/iCONCUR/essential_data.sql",
 			"settings":
 			{
-				"buffer_size": 308,
+				"buffer_size": 919904,
 				"line_ending": "Unix"
 			}
 		}
@@ -222,7 +262,9 @@
 	},
 	"file_history":
 	[
+		"/Users/masudrahman/Code/TeamWifi/static/logout.html",
 		"/Users/masudrahman/Code/TeamWifi/static/lol.html",
+		"/Users/masudrahman/Code/TeamWifi/static/js/materialize.js",
 		"/Users/masudrahman/Code/TeamWifi/server.js",
 		"/Users/masudrahman/Code/TeamWifi/index.html",
 		"/Users/masudrahman/Code/IntroHCI/lab2/LICENSE",
@@ -347,9 +389,7 @@
 		"/private/etc/hosts",
 		"/Users/masudrahman/.homestead/Homestead.yaml",
 		"/Users/masudrahman/Code/TwitterAuth/app/User.php",
-		"/Users/masudrahman/Code/TwitterAuth/app/Http/Controllers/Auth/AuthController.php",
-		"/Users/masudrahman/Code/TwitterAuth/database/factories/ModelFactory.php",
-		"/Users/masudrahman/Code/TwitterAuth/app/US"
+		"/Users/masudrahman/Code/TwitterAuth/app/Http/Controllers/Auth/AuthController.php"
 	],
 	"find":
 	{
@@ -357,7 +397,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -517,7 +557,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -525,15 +565,41 @@
 					"file": "static/index.html",
 					"settings":
 					{
-						"buffer_size": 1017,
+						"buffer_size": 2548,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								504,
-								504
+								2288,
+								2288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 253.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "static/settings.html",
+					"settings":
+					{
+						"buffer_size": 1273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1180,
+								1180
 							]
 						],
 						"settings":
@@ -547,7 +613,113 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "static/signout.html",
+					"settings":
+					{
+						"buffer_size": 1273,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1180,
+								1180
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "static/faq.html",
+					"settings":
+					{
+						"buffer_size": 1268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "static/history.html",
+					"settings":
+					{
+						"buffer_size": 1831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1830,
+								1747
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "static/wifi.html",
+					"settings":
+					{
+						"buffer_size": 1275,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1275
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"settings":
 					{
 						"buffer_size": 256363,
@@ -1056,52 +1228,25 @@
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 9554.0,
+						"translation.y": 494.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "static/js/materialize.js",
-					"settings":
-					{
-						"buffer_size": 298414,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								77331,
-								77331
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 10265.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
+					"buffer": 7,
 					"file": "static/css/style.css",
 					"settings":
 					{
-						"buffer_size": 308,
+						"buffer_size": 492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								306,
-								306
+								169,
+								169
 							]
 						],
 						"settings":
@@ -1109,6 +1254,32 @@
 							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/masudrahman/Code/iCONCUR/essential_data.sql",
+					"settings":
+					{
+						"buffer_size": 919904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SQL/SQL.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
