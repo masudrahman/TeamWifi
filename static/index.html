@@ -88,7 +88,7 @@
 			    <a class="dropdown-item" href="./faq.html">FAQ</a>
 			    <a class="dropdown-item" href="./settings.html">Settings</a>
 			    <div class="dropdown-divider"></div>
-			    <a class="dropdown-item" href="./signout.html">Sign Out</a>
+			    <a class="dropdown-item" href="./login.html">Sign Out</a>
 			  </div>
 			</div>
 
@@ -102,6 +102,7 @@
 
         <div id="map"></div>
 
+      <!-- Leaflet Map and GeoJSON Stuff -->
 
 	    <script>
 	        var map = L.map('map').setView([32.880824, -117.237583], 15);
@@ -110,9 +111,44 @@
 	        L.tileLayer(
 	            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	            attribution: '&copy; ' + mapLink + ' Contributors',
+	            minZoom: 15,
 	            maxZoom: 18,
 	            }).addTo(map);
+
+	        var myLines = [{
+					    "type": "LineString",
+					    "coordinates": [[-117.237583, 32.880824], [-117.239583, 32.880824]]
+					}, {
+					    "type": "LineString",
+					    "coordinates": [[32.880824, -117.237583], [32.885824, -117.237583]]
+					}];
+
+					var myStyle = {
+					    "color": "#ff7800",
+					    "weight": 5,
+					    "opacity": 0.65
+					};
+
+					var geojsonFeature = {
+					    "type": "Feature",
+    					"bbox": [-10.0, -10.0, 10.0, 10.0],
+    					"geometry": {
+					      "type": "Polygon",
+					      "coordinates": [[
+					        [-117.237583, 32.880824], [-117.239583, 32.880824], [-117.237583, 32.882824], [-117.239583, 32.882824]
+					        ]]
+      				}
+					};
+
+					L.geoJson(myLines, {
+					    style: myStyle
+					}).addTo(map);
+
+					L.geoJson(geojsonFeature).addTo(map);
+
 	    </script>
+
+
 
 	    <script type="text/javascript">
 				SomApi.account = "SOM581973ffa2b40"; //your API Key here
