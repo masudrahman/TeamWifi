@@ -26,9 +26,9 @@
 		  </div>
 		  <div class="card-block">
 		    <blockquote class="card-blockquote">
-		      <div class="alert alert-success" role="alert">Great</div>
+		    	<div class="alert alert-danger" role="alert">Slow</div>
 		      <div class="alert alert-warning" role="alert">Average</div>
-			  <div class="alert alert-danger" role="alert">Slow</div>
+			  	<div class="alert alert-success" role="alert">Great</div>
 		    </blockquote>
 		  </div>
 		</div>
@@ -43,13 +43,25 @@
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Modal Header</h4>
+			        <h4 class="modal-title">Wifi Speed</h4>
 			      </div>
 			      <div class="modal-body">
-			        <p>Some text in the modal.</p>
+			        <div class="form-group">
+							  <label for="comment">Comment:</label>
+							  <input type="text" class="form-control" id="pwd" placeholder="(Optional)">
+							</div>
+
+							<p>Personal Speed Rating:</p>
+
+							<div class="btn-group" role="group" aria-label="Basic example">
+							  <button type="button" class="alert alert-danger">Slow</button>
+							  <button type="button" class="alert alert-warning">Average</button>
+							  <button type="button" class="alert alert-success">Great</button>
+							</div>
+
 			      </div>
 			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
 			      </div>
 			    </div>
 
