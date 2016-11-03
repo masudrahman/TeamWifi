@@ -64,37 +64,6 @@
 			        <button type="button" class="btn btn-default" onclick="btnStartClick()">Submit</button>
 
 			        <div id="msg"></div>
-							<script type="text/javascript">
-								SomApi.account = "SOM581973ffa2b40"; //your API Key here
-								SomApi.domainName = "wifilyf.herokuapp.com"; //your domain or sub-domain here
-								SomApi.config.sustainTime = 4;
-								SomApi.onTestCompleted = onTestCompleted;
-								SomApi.onError = onError;
-
-								var msgDiv = document.getElementById("msg");
-
-								function btnStartClick() {
-									msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
-									SomApi.startTest();
-								}
-
-								function onTestCompleted(testResult) {
-									msgDiv.innerHTML =
-									"<h3>"+
-									"Download: " +testResult.download +"Mbps <br/>"+
-									"Upload: " +testResult.upload +"Mbps <br/>"+
-									"Latency: " +testResult.latency +"ms <br/>"+
-									"Jitter: " +testResult.jitter +"ms <br/>"+
-									"Test Server: "+testResult.testServer +"<br/>"+
-									"IP: " +testResult.ip_address +"<br/>"+
-									"Hostname: " +testResult.hostname +"<br/>"+
-									"</h3>";
-								}
-
-								function onError(error) {
-									msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
-								}
-							</script>
 
 			      </div>
 			    </div>
@@ -143,6 +112,38 @@
 	            maxZoom: 18,
 	            }).addTo(map);
 	    </script>
+
+	    <script type="text/javascript">
+				SomApi.account = "SOM581973ffa2b40"; //your API Key here
+				SomApi.domainName = "wifilyf.herokuapp.com"; //your domain or sub-domain here
+				SomApi.config.sustainTime = 4;
+				SomApi.onTestCompleted = onTestCompleted;
+				SomApi.onError = onError;
+
+				var msgDiv = document.getElementById("msg");
+
+				function btnStartClick() {
+					msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
+					SomApi.startTest();
+				}
+
+				function onTestCompleted(testResult) {
+					msgDiv.innerHTML =
+					"<h3>"+
+					"Download: " +testResult.download +"Mbps <br/>"+
+					"Upload: " +testResult.upload +"Mbps <br/>"+
+					"Latency: " +testResult.latency +"ms <br/>"+
+					"Jitter: " +testResult.jitter +"ms <br/>"+
+					"Test Server: "+testResult.testServer +"<br/>"+
+					"IP: " +testResult.ip_address +"<br/>"+
+					"Hostname: " +testResult.hostname +"<br/>"+
+					"</h3>";
+				}
+
+				function onError(error) {
+					msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
+				}
+			</script>
 
 
     </div>
