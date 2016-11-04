@@ -124,10 +124,11 @@
 	            }).addTo(map);
 
 	        var lc = L.control.locate({
-					    strings: {
-					        title: "Current Location"
-					    }
-					}).addTo(map);
+
+							    strings: {
+							        title: "Current Location"
+							    }
+							}).addTo(map)
 
 
 	        var myLines = [{
@@ -154,7 +155,9 @@
 							  }
 					};
 
-					
+					L.geoJson(myLines, {
+					    style: myStyle
+					}).addTo(map);
 
 					{{#each Wifi}}
 
