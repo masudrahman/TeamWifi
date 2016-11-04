@@ -1,27 +1,30 @@
-<!-- Compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+<html>
 
-<script src="https://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-<!--<script src="https://maps.google.com/maps/api/js?key=AIzaSyBQIoDF-NYDXiovnOeBtRBzqzr7S2VQv8E" type="text/javascript"></script> -->
-<script src="./js/myscript.js" type="text/javascript"></script>
-<script src="//speedof.me/api/api.js" type="text/javascript"></script>
+<head>
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
-<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+	<!--<script src="https://maps.google.com/maps/api/js?key=AIzaSyBQIoDF-NYDXiovnOeBtRBzqzr7S2VQv8E" type="text/javascript"></script> -->
+	<script src="./js/myscript.js" type="text/javascript"></script>
+	<script src="//speedof.me/api/api.js" type="text/javascript"></script>
 
-<!-- Leaflet Locate Control -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" />
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 
-<script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+	<!-- Leaflet Locate Control -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" />
 
-<title>Team Wifi</title>
+	<script src="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
 
-<head></head>
+	<title>Team Wifi</title>
+
+</head>
 
 
 <body>
@@ -113,9 +116,9 @@
 	    <script>
 	        var map = L.map('map').setView([32.880824, -117.237583], 15);
 	        mapLink =
-	            '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+	            '<a href="https://openstreetmap.org">OpenStreetMap</a>';
 	        L.tileLayer(
-	            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	            attribution: '&copy; ' + mapLink + ' Contributors',
 	            minZoom: 15,
 	            maxZoom: 18,
@@ -126,7 +129,7 @@
 							    strings: {
 							        title: "Current Location"
 							    }
-							}).addTo(map);
+							}).addTo(map)
 
 
 	        var myLines = [{
@@ -153,24 +156,57 @@
 							  }
 					};
 
-
-
 					L.geoJson(myLines, {
 					    style: myStyle
 					}).addTo(map);
 
-					var geojsonMarkerOptions = {
-				    radius: 15,
-				    fillColor: "#ff7800",
+					var geojsonFeature1 = {
+					    "type": "Feature",
+					    "geometry": {
+					        "type": "Point",
+					        "coordinates": [-117.237583, 32.880824]
+					    }
+					};
+
+					var geojsonFeature2 = {
+					    "type": "Feature",
+					    "geometry": {
+					        "type": "Point",
+					        "coordinates": [-117.241821, 32.885320]
+					    }
+					};
+
+
+					var geojsonMarkerOptions1 = {
+				    radius: 40,
+				    fillColor: "#f2dede",
 				    color: "#000",
 				    weight: 1,
 				    opacity: 1,
-				    fillOpacity: 0.3
+				    fillOpacity: 0.7,
+				    clickable: false
 					};
 
-					L.geoJson(revelle, {
+					var geojsonMarkerOptions2 = {
+				    radius: 40,
+				    fillColor: "#dff0d8",
+				    color: "#000",
+				    weight: 1,
+				    opacity: 1,
+				    fillOpacity: 0.7,
+				    clickable: false
+					};
+
+
+					L.geoJson(geojsonFeature1, {
 					    pointToLayer: function (feature, latlng) {
-					        return L.circleMarker(latlng, geojsonMarkerOptions);
+					        return L.circleMarker(latlng, geojsonMarkerOptions1);
+					    }
+					}).addTo(map);
+
+					L.geoJson(geojsonFeature2, {
+					    pointToLayer: function (feature, latlng) {
+					        return L.circleMarker(latlng, geojsonMarkerOptions2);
 					    }
 					}).addTo(map);
 
@@ -214,3 +250,5 @@
 
     </div>
 </body>
+
+</html>

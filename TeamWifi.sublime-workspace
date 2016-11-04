@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"geo",
+				"geojsonFeature"
+			],
+			[
 				"p",
 				"padding-left"
 			],
@@ -144,45 +148,11 @@
 	"buffers":
 	[
 		{
-			"file": "static/test.html",
+			"file": "/Users/masudrahman/Code/IntroHCI/lab5/routes/index.js",
 			"settings":
 			{
-				"buffer_size": 1273,
+				"buffer_size": 146,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/index.html",
-			"settings":
-			{
-				"buffer_size": 7073,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 341 files for \"index.html\"\n\n/Users/masudrahman/Code/TeamWifi/server.js:\n   21  // Return all pages in the /static directory\n   22  // whenever they are requested at '/'\n   23: // e.g., http://localhost:3000/index.html\n   24: // maps to /static/index.html on this machine\n   25  app.use(express.static(__dirname + '/static'));\n   26  \n\n/Users/masudrahman/Code/TeamWifi/TeamWifi.sublime-workspace:\n  201  		\"/Users/masudrahman/Code/WiFinder/static/css/style.css\",\n  202  		\"/Users/masudrahman/Code/TeamWifi/static/test.html\",\n  203: 		\"/Users/masudrahman/Code/TeamWifi/static/index.html\",\n  204  		\"/Users/masudrahman/Code/TeamWifi/static/css/style.css\",\n  205  		\"/Users/masudrahman/Code/TeamWifi/static/js/wifi.js\",\n  ...\n  209  		\"/Users/masudrahman/Code/TeamWifi/static/js/materialize.js\",\n  210  		\"/Users/masudrahman/Code/TeamWifi/server.js\",\n  211: 		\"/Users/masudrahman/Code/TeamWifi/index.html\",\n  212  		\"/Users/masudrahman/Code/IntroHCI/lab2/LICENSE\",\n  213  		\"/Users/masudrahman/Code/IntroHCI/lab2/Procfile\",\n  ...\n  274  		\"/Users/masudrahman/Code/iCONCUR/bootstrap/cache/.gitignore\",\n  275  		\"/Users/masudrahman/Code/EasyFlight/README.md\",\n  276: 		\"/Users/masudrahman/Code/EasyFlight/app/views/flight_info/index.html.erb\",\n  277  		\"/Users/masudrahman/Code/EasyFlight/app/bot/example.rb\",\n  278  		\"/Users/masudrahman/Code/EasyFlight/config/routes.rb\",\n  ...\n  318  		\"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/head.php\",\n  319  		\"/Users/masudrahman/Code/wordpress/wp-content/startwordpress/style.css\",\n  320: 		\"/Users/masudrahman/Code/wordpress/wp-content/startwordpress/index.html\",\n  321  		\"/Users/masudrahman/Library/Application Support/Sublime Text 2/Packages/AppleScript/Typescript.sublime-build\",\n  322  		\"/Users/masudrahman/Desktop/FolderLocker.bat\"\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/lib/middleware/static.js:\n   35   *    - `hidden`     Allow transfer of hidden files. defaults to false\n   36   *    - `redirect`   Redirect to trailing \"/\" when the pathname is a dir. defaults to true\n   37:  *    - `index`      Default file name, defaults to 'index.html'\n   38   *\n   39   * @param {String} root\n   ..\n   85        .maxage(options.maxAge || 0)\n   86        .root(root)\n   87:       .index(options.index || 'index.html')\n   88        .hidden(options.hidden)\n   89        .on('error', error)\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/node_modules/qs/package.json:\n   28      \"node\": \"*\"\n   29    },\n   30:   \"readme\": \"# node-querystring\\n\\n  query string parser for node and the browser supporting nesting, as it was removed from `0.3.x`, so this library provides the previous and commonly desired behaviour (and twice as fast). Used by [express](http://expressjs.com), [connect](http://senchalabs.github.com/connect) and others.\\n\\n## Installation\\n\\n    $ npm install qs\\n\\n## Examples\\n\\n```js\\nvar qs = require('qs');\\n\\nqs.parse('user[name][first]=Tobi&user[email]=tobi@learnboost.com');\\n// => { user: { name: { first: 'Tobi' }, email: 'tobi@learnboost.com' } }\\n\\nqs.stringify({ user: { name: 'Tobi', email: 'tobi@learnboost.com' }})\\n// => user[name]=Tobi&user[email]=tobi%40learnboost.com\\n```\\n\\n## Testing\\n\\nInstall dev dependencies:\\n\\n    $ npm install -d\\n\\nand execute:\\n\\n    $ make test\\n\\nbrowser:\\n\\n    $ open test/browser/index.html\\n\\n## License \\n\\n(The MIT License)\\n\\nCopyright (c) 2010 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\\n\\nPermission is hereby granted, free of charge, to any person obtaining\\na copy of this software and associated documentation files (the\\n'Software'), to deal in the Software without restriction, including\\nwithout limitation the rights to use, copy, modify, merge, publish,\\ndistribute, sublicense, and/or sell copies of the Software, and to\\npermit persons to whom the Software is furnished to do so, subject to\\nthe following conditions:\\n\\nThe above copyright notice and this permission notice shall be\\nincluded in all copies or substantial portions of the Software.\\n\\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\",\n   31    \"readmeFilename\": \"Readme.md\",\n   32    \"bugs\": {\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/node_modules/qs/Readme.md:\n   31  browser:\n   32  \n   33:     $ open test/browser/index.html\n   34  \n   35  ## License \n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/send/package.json:\n   32    },\n   33    \"main\": \"index\",\n   34:   \"readme\": \"# send\\n\\n  Send is Connect's `static()` extracted for generalized use, a streaming static file\\n  server supporting partial responses (Ranges), conditional-GET negotiation, high test coverage, and granular events which may be leveraged to take appropriate actions in your application or framework.\\n\\n## Installation\\n\\n    $ npm install send\\n\\n## Examples\\n\\n  Small:\\n\\n```js\\nvar http = require('http');\\nvar send = require('send');\\n\\nvar app = http.createServer(function(req, res){\\n  send(req, req.url).pipe(res);\\n}).listen(3000);\\n```\\n\\n  Serving from a root directory with custom error-handling:\\n\\n```js\\nvar http = require('http');\\nvar send = require('send');\\nvar url = require('url');\\n\\nvar app = http.createServer(function(req, res){\\n  // your custom error-handling logic:\\n  function error(err) {\\n    res.statusCode = err.status || 500;\\n    res.end(err.message);\\n  }\\n\\n  // your custom directory handling logic:\\n  function redirect() {\\n    res.statusCode = 301;\\n    res.setHeader('Location', req.url + '/');\\n    res.end('Redirecting to ' + req.url + '/');\\n  }\\n\\n  // transfer arbitrary files from within\\n  // /www/example.com/public/*\\n  send(req, url.parse(req.url).pathname)\\n  .root('/www/example.com/public')\\n  .on('error', error)\\n  .on('directory', redirect)\\n  .pipe(res);\\n}).listen(3000);\\n```\\n\\n## API\\n\\n### Events\\n\\n  - `error` an error occurred `(err)`\\n  - `directory` a directory was requested\\n  - `file` a file was requested `(path, stat)`\\n  - `stream` file streaming has started `(stream)`\\n  - `end` streaming has completed\\n\\n### .root(dir)\\n\\n  Serve files relative to `path`. Aliased as `.from(dir)`.\\n\\n### .index(path)\\n\\n  By default send supports \\\"index.html\\\" files, to disable this\\n  invoke `.index(false)` or to supply a new index pass a string.\\n\\n### .maxage(ms)\\n\\n  Provide a max-age in milliseconds for http caching, defaults to 0.\\n\\n### .hidden(bool)\\n\\n  Enable or disable transfer of hidden files, defaults to false.\\n\\n## Error-handling\\n\\n  By default when no `error` listeners are present an automatic response will be made, otherwise you have full control over the response, aka you may show a 5xx page etc.\\n\\n## Caching\\n\\n  It does _not_ perform internal caching, you should use a reverse proxy cache such\\n  as Varnish for this, or those fancy things called CDNs. If your application is small enough that it would benefit from single-node memory caching, it's small enough that it does not need caching at all ;).\\n\\n## Debugging\\n\\n To enable `debug()` instrumentation output export __DEBUG__:\\n\\n```\\n$ DEBUG=send node app\\n```\\n\\n## Running tests\\n\\n```\\n$ npm install\\n$ make test\\n```\\n\\n## License \\n\\n(The MIT License)\\n\\nCopyright (c) 2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\\n\\nPermission is hereby granted, free of charge, to any person obtaining\\na copy of this software and associated documentation files (the\\n'Software'), to deal in the Software without restriction, including\\nwithout limitation the rights to use, copy, modify, merge, publish,\\ndistribute, sublicense, and/or sell copies of the Software, and to\\npermit persons to whom the Software is furnished to do so, subject to\\nthe following conditions:\\n\\nThe above copyright notice and this permission notice shall be\\nincluded in all copies or substantial portions of the Software.\\n\\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\\n\",\n   35    \"readmeFilename\": \"Readme.md\",\n   36    \"bugs\": {\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/send/Readme.md:\n   68  ### .index(path)\n   69  \n   70:   By default send supports \"index.html\" files, to disable this\n   71    invoke `.index(false)` or to supply a new index pass a string.\n   72  \n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/send/lib/send.js:\n   66    this.maxage(0);\n   67    this.hidden(false);\n   68:   this.index('index.html');\n   69  }\n   70  \n\n/Users/masudrahman/Code/TeamWifi/static/faq.html:\n   12  <title>FAQ</title>\n   13  \n   14: <button type=\"button\" class=\"btn btn-lg\" ><a href=\"./index.html\">Back</a></button>\n   15  \n\n/Users/masudrahman/Code/TeamWifi/static/history.html:\n   38  \n   39  \n   40: <button type=\"button\" class=\"btn btn-lg\" ><a href=\"./index.html\">Back</a></button>\n   41  \n\n/Users/masudrahman/Code/TeamWifi/static/index.html:\n   84  			  </button>\n   85  			  <div class=\"dropdown-menu\">\n   86: 			    <a class=\"dropdown-item\" href=\"./index.html\">Map</a>\n   87  			    <a class=\"dropdown-item\" href=\"./history.html\">History</a>\n   88  			    <a class=\"dropdown-item\" href=\"./faq.html\">FAQ</a>\n\n/Users/masudrahman/Code/TeamWifi/static/login.html:\n   27          <input type=\"password\" placeholder=\"password\"/>\n   28          <br>\n   29:           <a id=\"login\" href=\"./index.html\" role=\"button\">Login</a>\n   30            <br>\n   31          <p class=\"message\">Not registered? <a href=\"#\">Create an account</a></p>\n\n/Users/masudrahman/Code/TeamWifi/static/settings.html:\n   12  <title>Settings</title>\n   13  \n   14: <button type=\"button\" class=\"btn btn-lg\" ><a href=\"./index.html\">Back</a></button>\n   15  \n\n/Users/masudrahman/Code/TeamWifi/static/signout.html:\n   12  <title>Sign Out</title>\n   13  \n   14: <button type=\"button\" class=\"btn btn-lg\" ><a href=\"./index.html\">Back</a></button>\n   15  \n\n/Users/masudrahman/Code/TeamWifi/static/wifi.html:\n   12  <title>Check Wifi</title>\n   13  \n   14: <button type=\"button\" class=\"btn btn-lg\" ><a href=\"./index.html\">Back</a></button>\n   15  \n\n20 matches across 15 files\n\n\nSearching 341 files for \"app.use\"\n\n/Users/masudrahman/Code/TeamWifi/server.js:\n   16  \n   17  // Print logs to the console and compress pages we send\n   18: app.use(express.logger());\n   19: app.use(express.compress());\n   20  \n   21  // Return all pages in the /static directory\n   ..\n   23  // e.g., http://localhost:3000/index.html\n   24  // maps to /static/index.html on this machine\n   25: app.use(express.static(__dirname + '/static'));\n   26  \n   27  // Start the server\n\n/Users/masudrahman/Code/TeamWifi/node_modules/.bin/express:\n  221    , 'app.set(\\'views\\', path.join(__dirname, \\'views\\'));'\n  222    , 'app.set(\\'view engine\\', \\':TEMPLATE\\');'\n  223:   , 'app.use(express.favicon());'\n  224:   , 'app.use(express.logger(\\'dev\\'));'\n  225:   , 'app.use(express.json());'\n  226:   , 'app.use(express.urlencoded());'\n  227:   , 'app.use(express.methodOverride());{sess}'\n  228:   , 'app.use(app.router);{css}'\n  229:   , 'app.use(express.static(path.join(__dirname, \\'public\\')));'\n  230    , ''\n  231    , '// development only'\n  232    , 'if (\\'development\\' == app.get(\\'env\\')) {'\n  233:   , '  app.use(express.errorHandler());'\n  234    , '}'\n  235    , ''\n  ...\n  325      switch (program.css) {\n  326        case 'less':\n  327:         app = app.replace('{css}', eol + 'app.use(require(\\'less-middleware\\')({ src: path.join(__dirname, \\'public\\') }));');\n  328          break;\n  329        case 'stylus':\n  330:         app = app.replace('{css}', eol + 'app.use(require(\\'stylus\\').middleware(path.join(__dirname, \\'public\\')));');\n  331          break;\n  332        default:\n  ...\n  336      // Session support\n  337      app = app.replace('{sess}', program.sessions\n  338:       ? eol + 'app.use(express.cookieParser(\\'your secret here\\'));' + eol + 'app.use(express.session());'\n  339        : '');\n  340  \n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/bin/express:\n  221    , 'app.set(\\'views\\', path.join(__dirname, \\'views\\'));'\n  222    , 'app.set(\\'view engine\\', \\':TEMPLATE\\');'\n  223:   , 'app.use(express.favicon());'\n  224:   , 'app.use(express.logger(\\'dev\\'));'\n  225:   , 'app.use(express.json());'\n  226:   , 'app.use(express.urlencoded());'\n  227:   , 'app.use(express.methodOverride());{sess}'\n  228:   , 'app.use(app.router);{css}'\n  229:   , 'app.use(express.static(path.join(__dirname, \\'public\\')));'\n  230    , ''\n  231    , '// development only'\n  232    , 'if (\\'development\\' == app.get(\\'env\\')) {'\n  233:   , '  app.use(express.errorHandler());'\n  234    , '}'\n  235    , ''\n  ...\n  325      switch (program.css) {\n  326        case 'less':\n  327:         app = app.replace('{css}', eol + 'app.use(require(\\'less-middleware\\')({ src: path.join(__dirname, \\'public\\') }));');\n  328          break;\n  329        case 'stylus':\n  330:         app = app.replace('{css}', eol + 'app.use(require(\\'stylus\\').middleware(path.join(__dirname, \\'public\\')));');\n  331          break;\n  332        default:\n  ...\n  336      // Session support\n  337      app = app.replace('{sess}', program.sessions\n  338:       ? eol + 'app.use(express.cookieParser(\\'your secret here\\'));' + eol + 'app.use(express.session());'\n  339        : '');\n  340  \n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/lib/application.js:\n  102   */\n  103  \n  104: app.use = function(route, fn){\n  105    var app;\n  106  \n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/lib/connect.js:\n   69    app.stack = [];\n   70    for (var i = 0; i < arguments.length; ++i) {\n   71:     app.use(arguments[i]);\n   72    }\n   73    return app;\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/lib/proto.js:\n   36   *\n   37   *      var app = connect();\n   38:  *      app.use(connect.favicon());\n   39:  *      app.use(connect.logger());\n   40:  *      app.use(connect.static(__dirname + '/public'));\n   41   *\n   42   * If we wanted to prefix static files with _/public_, we could\n   43   * \"mount\" the `static()` middleware:\n   44   *\n   45:  *      app.use('/public', connect.static(__dirname + '/public'));\n   46   *\n   47   * This api is chainable, so the following is valid:\n   ..\n   59   */\n   60  \n   61: app.use = function(route, fn){\n   62    // default route to '/'\n   63    if ('string' != typeof route) {\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:\n   25   *   This is equivalent to:\n   26   *\n   27:  *     app.use(connect.json());\n   28:  *     app.use(connect.urlencoded());\n   29:  *     app.use(connect.multipart());\n   30   *\n   31   * Examples:\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/lib/middleware/cookieSession.js:\n   22   *\n   23   *      var app = connect();\n   24:  *      app.use(connect.cookieParser());\n   25:  *      app.use(connect.cookieSession({ secret: 'tobo!', cookie: { maxAge: 60 * 60 * 1000 }}));\n   26   *\n   27   * Options:\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/lib/middleware/multipart.js:\n   35   *  size limits, etc. For example if you wish to change the upload dir do the following.\n   36   *\n   37:  *     app.use(connect.multipart({ uploadDir: path }));\n   38   *\n   39   * Options:\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/node_modules/raw-body/package.json:\n   34      \"node\": \">= 0.8.0\"\n   35    },\n   36:   \"readme\": \"# Raw Body [![Build Status](https://travis-ci.org/stream-utils/raw-body.png)](https://travis-ci.org/stream-utils/raw-body)\\n\\nGets the entire buffer of a stream either as a `Buffer` or a string.\\nValidates the stream's length against an expected length and maximum limit.\\nIdeal for parsing request bodies.\\n\\n## API\\n\\n```js\\nvar getRawBody = require('raw-body')\\n\\napp.use(function (req, res, next) {\\n  getRawBody(req, {\\n    length: req.headers['content-length'],\\n    limit: '1mb',\\n    encoding: 'utf8'\\n  }, function (err, string) {\\n    if (err)\\n      return next(err)\\n\\n    req.text = string\\n    next()\\n  })\\n})\\n```\\n\\nor in a Koa generator:\\n\\n```js\\napp.use(function* (next) {\\n  var string = yield getRawBody(this.req, {\\n    length: this.length,\\n    limit: '1mb',\\n    encoding: 'utf8'\\n  })\\n})\\n```\\n\\n### getRawBody(stream, [options], [callback])\\n\\nReturns a thunk for yielding with generators.\\n\\nOptions:\\n\\n- `length` - The length length of the stream.\\n  If the contents of the stream do not add up to this length,\\n  an `400` error code is returned.\\n- `limit` - The byte limit of the body.\\n  If the body ends up being larger than this limit,\\n  a `413` error code is returned.\\n- `encoding` - The requested encoding.\\n  By default, a `Buffer` instance will be returned.\\n  Most likely, you want `utf8`.\\n  You can use any type of encoding supported by [StringDecoder](http://nodejs.org/api/string_decoder.html).\\n  You can also pass `true` which sets it to the default `utf8`\\n\\n`callback(err, res)`:\\n\\n- `err` - the following attributes will be defined if applicable:\\n\\n    - `limit` - the limit in bytes\\n    - `length` and `expected` - the expected length of the stream\\n    - `received` - the received bytes\\n    - `status` and `statusCode` - the corresponding status code for the error\\n    - `type` - either `entity.too.large`, `request.size.invalid`, or `stream.encoding.set`\\n\\n- `res` - the result, either as a `String` if an encoding was set or a `Buffer` otherwise.\\n\\nIf an error occurs, the stream will be paused,\\nand you are responsible for correctly disposing the stream.\\nFor HTTP requests, no handling is required if you send a response.\\nFor streams that use file descriptors, you should `stream.destroy()` or `stream.close()` to prevent leaks.\\n\\n## License\\n\\nThe MIT License (MIT)\\n\\nCopyright (c) 2013 Jonathan Ong me@jongleberry.com\\n\\nPermission is hereby granted, free of charge, to any person obtaining a copy\\nof this software and associated documentation files (the \\\"Software\\\"), to deal\\nin the Software without restriction, including without limitation the rights\\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\\ncopies of the Software, and to permit persons to whom the Software is\\nfurnished to do so, subject to the following conditions:\\n\\nThe above copyright notice and this permission notice shall be included in\\nall copies or substantial portions of the Software.\\n\\nTHE SOFTWARE IS PROVIDED \\\"AS IS\\\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\\nTHE SOFTWARE.\\n\",\n   37    \"readmeFilename\": \"README.md\",\n   38    \"homepage\": \"https://github.com/stream-utils/raw-body\",\n\n/Users/masudrahman/Code/TeamWifi/node_modules/express/node_modules/connect/node_modules/raw-body/README.md:\n   10  var getRawBody = require('raw-body')\n   11  \n   12: app.use(function (req, res, next) {\n   13    getRawBody(req, {\n   14      length: req.headers['content-length'],\n   ..\n   28  \n   29  ```js\n   30: app.use(function* (next) {\n   31    var string = yield getRawBody(this.req, {\n   32      length: this.length,\n\n44 matches across 11 files\n",
-			"settings":
-			{
-				"buffer_size": 20278,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "static/css/style.css",
-			"settings":
-			{
-				"buffer_size": 447,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/masudrahman/Code/iCONCUR/iconcur_quiz_questions.sql",
-			"settings":
-			{
-				"buffer_size": 3192,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -234,6 +204,11 @@
 	},
 	"file_history":
 	[
+		"/Users/masudrahman/Code/IntroHCI/lab5/data.json",
+		"/Users/masudrahman/Code/TeamWifi/static/index.html",
+		"/Users/masudrahman/Code/TeamWifi/static/test.html",
+		"/Users/masudrahman/Code/TeamWifi/static/css/style.css",
+		"/Users/masudrahman/Code/iCONCUR/iconcur_quiz_questions.sql",
 		"/Users/masudrahman/Code/TeamWifi/server.js",
 		"/Users/masudrahman/Code/TeamWifi/node_modules/express/lib/router/index.js",
 		"/Users/masudrahman/Code/TeamWifi/node_modules/express/index.js",
@@ -244,9 +219,6 @@
 		"/Users/masudrahman/Code/TeamWifi/static/signout.html",
 		"/Users/masudrahman/Code/TeamWifi/static/settings.html",
 		"/Users/masudrahman/Code/WiFinder/static/css/style.css",
-		"/Users/masudrahman/Code/TeamWifi/static/test.html",
-		"/Users/masudrahman/Code/TeamWifi/static/index.html",
-		"/Users/masudrahman/Code/TeamWifi/static/css/style.css",
 		"/Users/masudrahman/Code/TeamWifi/static/js/wifi.js",
 		"/Users/masudrahman/Code/iCONCUR/essential_data.sql",
 		"/Users/masudrahman/Code/TeamWifi/static/logout.html",
@@ -359,9 +331,7 @@
 		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/index.php",
 		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/style.css",
 		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/footer.php",
-		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/head.php",
-		"/Users/masudrahman/Code/wordpress/wp-content/startwordpress/style.css",
-		"/Users/masudrahman/Code/wordpress/wp-content/startwordpress/index.html"
+		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/head.php"
 	],
 	"find":
 	{
@@ -384,6 +354,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"domor",
 			"geojsonFeature",
 			"\",\n",
 			"app.use",
@@ -510,11 +481,10 @@
 			"1920",
 			"team",
 			"li",
-			"ol",
-			"ulkasemi"
+			"ol"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
@@ -529,410 +499,31 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "static/test.html",
+					"file": "/Users/masudrahman/Code/IntroHCI/lab5/routes/index.js",
 					"settings":
 					{
-						"buffer_size": 1273,
+						"buffer_size": 146,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1041,
-								1041
+								146,
+								146
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "static/index.html",
-					"settings":
-					{
-						"buffer_size": 7073,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4871,
-								4871
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1642.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"settings":
-					{
-						"buffer_size": 20278,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										217,
-										227
-									],
-									[
-										254,
-										264
-									],
-									[
-										584,
-										594
-									],
-									[
-										900,
-										910
-									],
-									[
-										1231,
-										1241
-									],
-									[
-										1624,
-										1634
-									],
-									[
-										2150,
-										2160
-									],
-									[
-										2314,
-										2324
-									],
-									[
-										3384,
-										3394
-									],
-									[
-										4757,
-										4767
-									],
-									[
-										6651,
-										6661
-									],
-									[
-										8971,
-										8981
-									],
-									[
-										9247,
-										9257
-									],
-									[
-										9423,
-										9433
-									],
-									[
-										9592,
-										9602
-									],
-									[
-										9792,
-										9802
-									],
-									[
-										10125,
-										10135
-									],
-									[
-										10426,
-										10436
-									],
-									[
-										10618,
-										10628
-									],
-									[
-										10809,
-										10819
-									],
-									[
-										11034,
-										11041
-									],
-									[
-										11068,
-										11075
-									],
-									[
-										11272,
-										11279
-									],
-									[
-										11548,
-										11555
-									],
-									[
-										11589,
-										11596
-									],
-									[
-										11636,
-										11643
-									],
-									[
-										11674,
-										11681
-									],
-									[
-										11718,
-										11725
-									],
-									[
-										11772,
-										11779
-									],
-									[
-										11811,
-										11818
-									],
-									[
-										11988,
-										11995
-									],
-									[
-										12166,
-										12173
-									],
-									[
-										12350,
-										12357
-									],
-									[
-										12586,
-										12593
-									],
-									[
-										12649,
-										12656
-									],
-									[
-										12906,
-										12913
-									],
-									[
-										12947,
-										12954
-									],
-									[
-										12994,
-										13001
-									],
-									[
-										13032,
-										13039
-									],
-									[
-										13076,
-										13083
-									],
-									[
-										13130,
-										13137
-									],
-									[
-										13169,
-										13176
-									],
-									[
-										13346,
-										13353
-									],
-									[
-										13524,
-										13531
-									],
-									[
-										13708,
-										13715
-									],
-									[
-										13944,
-										13951
-									],
-									[
-										14007,
-										14014
-									],
-									[
-										14165,
-										14172
-									],
-									[
-										14404,
-										14411
-									],
-									[
-										14610,
-										14617
-									],
-									[
-										14653,
-										14660
-									],
-									[
-										14695,
-										14702
-									],
-									[
-										14894,
-										14901
-									],
-									[
-										15055,
-										15062
-									],
-									[
-										15325,
-										15332
-									],
-									[
-										15364,
-										15371
-									],
-									[
-										15409,
-										15416
-									],
-									[
-										15639,
-										15646
-									],
-									[
-										15687,
-										15694
-									],
-									[
-										16029,
-										16036
-									],
-									[
-										16648,
-										16655
-									],
-									[
-										16947,
-										16954
-									],
-									[
-										19993,
-										20000
-									],
-									[
-										20140,
-										20147
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								10932,
-								10932
-							]
-						],
-						"settings":
-						{
-							"detect_indentation": false,
-							"output_tag": 2,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2647.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "static/css/style.css",
-					"settings":
-					{
-						"buffer_size": 447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								238,
-								238
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/Users/masudrahman/Code/iCONCUR/iconcur_quiz_questions.sql",
-					"settings":
-					{
-						"buffer_size": 3192,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1054,
-								1054
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/SQL/SQL.tmLanguage"
-						},
-						"translation.x": 280.0,
-						"translation.y": 146.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
