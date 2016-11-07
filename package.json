@@ -1,23 +1,25 @@
 {
-  "name": "IntroHCI",
-  "version": "0.0.1",
-  "author": "Intro HCI Staff",
-
+  "name": "teamwifi",
+  "version": "1.0.0",
+  "description": "Our app for our CSE 170 project",
+  "main": "app.js",
+  "dependencies": {
+    "express3-handlebars": "^0.5.0",
+    "express": "^3.4.7",
+    "leaflet.locatecontrol": "^0.56.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node app.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IntroHCI/lab5"
+    "url": "git+https://github.com/masudrahman/TeamWifi.git"
   },
+  "author": "Masud Rahman",
   "license": "MIT",
-
-  "private": true,
-  "scripts": {
-    "start": "node server.js"
+  "bugs": {
+    "url": "https://github.com/masudrahman/TeamWifi/issues"
   },
-  "dependencies": {
-    "express": "3.x",
-    "express3-handlebars": "*"
-  },
-  "engines": {
-    "node": "0.10.x"
-  }  
+  "homepage": "https://github.com/masudrahman/TeamWifi#readme"
 }
