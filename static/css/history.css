@@ -2,28 +2,29 @@ body {
   background: #446CB3;
 }
 
-.FAQ{
+.History{
   padding: 50px;
 }
 
-.FAQbox {
+.Date {
   background-color: white;
   border: 25px solid #c69214;
   padding: 15px;
   -webkit-box-shadow: 0 0 10px rgb(0,0,0);
   -moz-box-shadow: 0 0 10px rgb(0,0,0);
 }
-.FAQ h1{
-  margin-left: 100px;
-  margin-right: 70px;
+
+.col-lg-4{
+  background: #ECF0F1;
 }
 
-.FAQ h5 {
-  margin-left: 150px;
-  margin-right: 70px;
+.col-md-4{
+  background: #ECF0F1;
 }
 
-.FAQ p {
-  margin-left: 150px;
-  margin-right: 150px;
+
+.tab { margin-left: 40px; }
+
+p{
+  margin:0;
 }
