@@ -22,7 +22,6 @@
       "User-Rating": "Average",
       "Connection": "Average"
     },
-
     {
       "Latency": "246 ms",
       "upload": "1.3 mb/s",
@@ -39,25 +38,23 @@
       "upload": "20.22 mb/s",
       "download": "13.50 mb/s",
       "location": "Muir College",
-      "coordinates": [-117.240700, 32.882229],
+      "coordinates": [-117.241403, 32.878820],
       "Wifi-Name": "UCSD-PROTECTED",
       "User-Comments": "extremely fast wifi. very satisfied!",
       "User-Rating": "Great",
       "Connection": "Great"
     },
-
     {
       "Latency": "50 ms",
       "upload": "14.25 mb/s",
       "download": "10.50 mb/s",
       "location": "Marshall College",
-      "coordinates": [-117.241821, 32.885320],
+      "coordinates": [-117.240700, 32.882229],
       "Wifi-Name": "UCSD-PROTECTED",
       "User-Comments": "the wifi is okay. no problems",
       "User-Rating": "Average",
       "Connection": "Great"
     },
-
     {
       "Latency": "318 ms",
       "upload": "0.22 mb/s",
