@@ -7,7 +7,7 @@
 
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../static/css/history.css">
+<link rel="stylesheet" type="text/css" href="./css/history.css">
 
 
 <title>History</title>
@@ -15,22 +15,22 @@
   <div id="nav">
 
     <!-- Example single danger button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Menu
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="./index">Map</a>
-    <a class="dropdown-item" href="/history">History</a>
-    <a class="dropdown-item" href="/faq">FAQ</a>
-    <a class="dropdown-item" href="/settings">Settings</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="/">Sign Out</a>
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Menu
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="./index">Map</a>
+        <a class="dropdown-item" href="/history">History</a>
+        <a class="dropdown-item" href="/faq">FAQ</a>
+        <a class="dropdown-item" href="/settings">Settings</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/">Sign Out</a>
+      </div>
+    </div>
   </div>
-</div>
 
-  </div>
-  <div class="History">
+  <div class="History container">
     <div class="container Date">
       <h1> History </h1>
       <h3> November 8th 2016</h3>
@@ -46,10 +46,18 @@
           <p>Comments: "Felt Sluggish"</p>
           <p>Connection: Average</p>
           <p class="tab">Your Rating: Slow</p>
-          <p> </p>
-          <p> </p>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87205602-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
