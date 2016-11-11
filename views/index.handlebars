@@ -123,6 +123,7 @@
 		<!-- Leaflet Map and GeoJSON Stuff -->
 
 		<script>
+
 		var map = L.map('map').setView([32.880824, -117.237583], 15);
 		mapLink =
 		'<a href="https://openstreetmap.org">OpenStreetMap</a>';
@@ -133,8 +134,10 @@
 				maxZoom: 18,
 			}).addTo(map);
 
-			var currentLocation;
+			var currentLat; // Will grab current latitude after user checks location
+			var currentLng; // Will grab current longitude after user checks location
 
+			// Current location addon
 			var lc = L.control.locate({
 				strings: {
 					title: "Current Location"
@@ -142,29 +145,17 @@
 			}).addTo(map);
 
 
-			var myLines = [{
-				"type": "LineString",
-				"coordinates": [[-117.237583, 32.880824], [-117.239583, 32.880824]]
-			}, {
-				"type": "LineString",
-				"coordinates": [[32.880824, -117.237583], [32.885824, -117.237583]]
-			}];
-
-			var myStyle = {
-				"color": "#ff7800",
-				"weight": 5,
-				"opacity": 0.65
-			};
-
-			var revelle = {
-				"type": "Feature",
-				"geometry": {
-					"type": "Polygon",
-					"coordinates": [
-						[ [-117.241134, 32.870299], [-117.240172, 32.870787], [-117.239131, 32.871458], [-117.237956, 32.872958]]
-					]
-				}
-			};
+			// Return coordinates of current locations
+			map.locate({setView: true, watch: true}) /* This will return map so you can do chaining */
+        .on('locationfound', function(e){
+            currentLat = e.latitude;
+            currentLng = e.longitude;
+           
+        })
+       .on('locationerror', function(e){
+            console.log(e);
+            alert("Location access denied.");
+        });
 
 
 
@@ -249,31 +240,17 @@
 					return L.circleMarker(latlng, geoOption);
 				}
 			}).addTo(map);
-
-			map.locate({setView: true, watch: true}) /* This will return map so you can do chaining */
-        .on('locationfound', function(e){
-            var lat = e.latitude;
-            var lng = e.longitude;
-
-            console.log(lat);
-            console.log(lng);
-           
-        })
-       .on('locationerror', function(e){
-            console.log(e);
-            alert("Location access denied.");
-        })
+		
 
 
 			{{/each}}
 
 
-			</script>
+			
 
 
-			<!-- Wifi Test API Code -->
+			 //Wifi Test API Code
 
-			<script type="text/javascript">
 			SomApi.account = "SOM5822adc45fddf"; //your API Key here
 			SomApi.domainName = "wifindersd.herokuapp.com"; //your domain or sub-domain here
 			SomApi.config.sustainTime = 4;
@@ -303,6 +280,35 @@
 			function onError(error) {
 				msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
 			}
+
+			var newgeojsonFeature = {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [currentLng, currentLat]
+				}
+			};
+
+			var speed = testResult.download;
+
+			if(speed < 7.86){
+				geoOption = geojsonMarkerOptions2;
+			}
+
+			else if(speed > 7.86 && speed < 10){
+				geoOption = geojsonMarkerOptions3;
+			}
+
+			else{
+				geoOption = geojsonMarkerOptions1;
+			}
+
+			L.geoJson(newgeojsonFeature, {
+				pointToLayer: function (feature, latlng) {
+					return L.circleMarker(latlng, geoOption);
+				}
+			}).addTo(map);
+
 			</script>
 
 
