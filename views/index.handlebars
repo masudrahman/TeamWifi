@@ -28,76 +28,76 @@
 
 
 <body>
-    <div id="container">
+	<div id="container">
 
-    	<div class="card" id="key">
-		  <div class="card-header">
-		    Key
-		  </div>
-		  <div class="card-block">
-		    <blockquote class="card-blockquote">
-		    	<div class="alert alert-danger" role="alert">Slow</div>
-		      <div class="alert alert-warning" role="alert">Average</div>
-			  	<div class="alert alert-success" role="alert">Great</div>
-		    </blockquote>
-		  </div>
+		<div class="card" id="key">
+			<div class="card-header">
+				Key
+			</div>
+			<div class="card-block">
+				<blockquote class="card-blockquote">
+					<div class="alert alert-danger" role="alert">Slow</div>
+					<div class="alert alert-warning" role="alert">Average</div>
+					<div class="alert alert-success" role="alert">Great</div>
+				</blockquote>
+			</div>
 		</div>
 
 
-			<!-- Modal -->
-			<div id="myModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog">
+		<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
 
-			    <!-- Modal content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Wifi Speed</h4>
-			      </div>
-			      <div class="modal-body">
-			        <div class="form-group">
-							  <label for="comment">Comment:</label>
-							  <input type="text" class="form-control" id="pwd" placeholder="(Optional)">
-							</div>
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Wifi Speed</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="comment">Comment:</label>
+							<input type="text" class="form-control" id="pwd" placeholder="(Optional)">
+						</div>
 
-							<p>Personal Speed Rating:</p>
+						<p>Personal Speed Rating:</p>
 
-							<div class="btn-group" role="group" aria-label="Basic example">
-							  <button type="button" class="alert alert-danger">Slow</button>
-							  <button type="button" class="alert alert-warning">Average</button>
-							  <button type="button" class="alert alert-success">Great</button>
-							</div>
+						<div class="btn-group" role="group" aria-label="Basic example">
+							<button type="button" class="alert alert-danger">Slow</button>
+							<button type="button" class="alert alert-warning">Average</button>
+							<button type="button" class="alert alert-success">Great</button>
+						</div>
 
-			      </div>
-			      <div class="modal-footer">
-			        <button type="button" class="btn btn-default" onclick="btnStartClick()">Submit</button>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" onclick="btnStartClick()">Submit</button>
 
-			        <div id="msg"></div>
+						<div id="msg"></div>
 
-			      </div>
-			    </div>
+					</div>
+				</div>
 
-			  </div>
 			</div>
+		</div>
 
 
 
 
-        <div id="nav">
+		<div id="nav">
 
-        	<!-- Example single danger button -->
+			<!-- Example single danger button -->
 			<div class="btn-group">
-			  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Menu
-			  </button>
-			  <div class="dropdown-menu">
-			    <a class="dropdown-item" href="./index">Map</a>
-			    <a class="dropdown-item" href="/history">History</a>
-			    <a class="dropdown-item" href="/faq">FAQ</a>
-			    <a class="dropdown-item" href="/settings">Settings</a>
-			    <div class="dropdown-divider"></div>
-			    <a class="dropdown-item" href="/">Sign Out</a>
-			  </div>
+				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Menu
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="./index">Map</a>
+					<a class="dropdown-item" href="/history">History</a>
+					<a class="dropdown-item" href="/faq">FAQ</a>
+					<a class="dropdown-item" href="/settings">Settings</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="/">Sign Out</a>
+				</div>
 			</div>
 
         </div>
@@ -110,224 +110,199 @@
 
         <div id="map"></div>
 
-      <!-- Leaflet Map and GeoJSON Stuff -->
+      
+		</div>
 
-	    <script>
-	        var map = L.map('map').setView([32.880824, -117.237583], 15);
-	        mapLink =
-	            '<a href="https://openstreetmap.org">OpenStreetMap</a>';
-	        L.tileLayer(
-	            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	            attribution: '&copy; ' + mapLink + ' Contributors',
-	            minZoom: 15,
-	            maxZoom: 18,
-	            }).addTo(map);
+		<div id="wifi">
 
-	        var lc = L.control.locate({
-					    strings: {
-					        title: "Current Location"
-					    }
-					}).addTo(map);
+			<a href="./wifi.html" class="btn btn-lg btn-info"  role="button" data-toggle="modal" data-target="#myModal">Check Wifi</a>
 
-	        console.log(lc.latlng);
+		</div>
 
+		<div id="map"></div>
 
-	        var myLines = [{
-					    "type": "LineString",
-					    "coordinates": [[-117.237583, 32.880824], [-117.239583, 32.880824]]
-					}, {
-					    "type": "LineString",
-					    "coordinates": [[32.880824, -117.237583], [32.885824, -117.237583]]
-					}];
+		<!-- Leaflet Map and GeoJSON Stuff -->
 
-					var myStyle = {
-					    "color": "#ff7800",
-					    "weight": 5,
-					    "opacity": 0.65
-					};
+		<script>
+		var map = L.map('map').setView([32.880824, -117.237583], 15);
+		mapLink =
+		'<a href="https://openstreetmap.org">OpenStreetMap</a>';
+		L.tileLayer(
+			'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; ' + mapLink + ' Contributors',
+				minZoom: 15,
+				maxZoom: 18,
+			}).addTo(map);
 
-					var revelle = {
-					    "type": "Feature",
-    					"geometry": {
-					       "type": "Polygon",
-							    "coordinates": [
-							      [ [-117.241134, 32.870299], [-117.240172, 32.870787], [-117.239131, 32.871458], [-117.237956, 32.872958]]
-							      ]
-							  }
-					};
-
-					
-
-					{{#each Wifi}}
-
-					
-					var geojsonFeature = {
-					    "type": "Feature",
-					    "properties": {
-					    		"Latency": "{{Latency}}",
-						      "upload": "{{upload}}",
-						      "download": "{{download}}",
-						      "location": "{{location}}",
-						      "Wifi-Name": "{{Wifi-Name}}",
-						      "User-Comments": "{{User-Comments}}",
-						      "User-Rating": "{{User-Rating}}",
-						      "Connection": "{{Connection}}"
-					    },
-					    "geometry": {
-					        "type": "Point",
-					        "coordinates": [{{coordinates}}]
-					    }
-					};
-
-					var geoOption;
-
-					var geojsonFeature1 = {
-					    "type": "Feature",
-					    "geometry": {
-					        "type": "Point",
-					        "coordinates": [-117.237583, 32.880824]
-					    }
-					};
-
-					var geojsonFeature2 = {
-					    "type": "Feature",
-					    "geometry": {
-					        "type": "Point",
-					        "coordinates": [-117.241821, 32.885320]
-					    }
-					};
-
-					function onEachFeature(feature, layer) {
-					    // does this feature have a property named popupContent?
-					    var popupContent = "Sup dude";
-
-					    if(feature.properties && feature.properties.Connection) {
-					        popupContent += feature.properties.Connection;
-					    }
-
-					    layer.bindPopup(popupContent);
-					}
-
-
-					// Poor
-					var geojsonMarkerOptions1 = {
-				    radius: 40,
-				    fillColor: "#f2dede",
-				    color: "#000",
-				    weight: 1,
-				    opacity: 1,
-				    fillOpacity: 0.7,
-				    clickable: false
-					};
-
-					// Great
-					var geojsonMarkerOptions2 = {
-				    radius: 40,
-				    fillColor: "#dff0d8",
-				    color: "#000",
-				    weight: 1,
-				    opacity: 1,
-				    fillOpacity: 0.7,
-				    clickable: false
-					};
-
-					// Average
-					var geojsonMarkerOptions3 = {
-				    radius: 40,
-				    fillColor: "#fcf8e3",
-				    color: "#000",
-				    weight: 1,
-				    opacity: 1,
-				    fillOpacity: 0.7,
-				    clickable: false
-					};
-
-					if("{{Connection}}" == "Great"){
-						geoOption = geojsonMarkerOptions2;
-					}
-
-					else if("{{Connection}}" == "Average"){
-						geoOption = geojsonMarkerOptions3;
-					}
-
-					else{
-						geoOption = geojsonMarkerOptions1;
-					}
-
-
-					var x = L.geoJson(geojsonFeature, {
-					    pointToLayer: function (feature, latlng) {
-					        return L.circleMarker(latlng, geoOption);
-					    }
-					}).bindPopup("I am a green leaf.").addTo(map);
-
-
-					{{/each}}
-
-					function meow(feature, layer) {
-					    // does this feature have a property named popupContent?
-					    if (feature.properties && feature.properties.popupContent) {
-					        layer.bindPopup(feature.properties.popupContent);
-					    }
-					}
-
-					var sup = {
-					    "type": "Feature",
-					    "properties": {
-					        "name": "Coors Field",
-					        "amenity": "Baseball Stadium",
-					        "popupContent": "This is where the Rockies play!"
-					    },
-					    "geometry": {
-					        "type": "Point",
-					        "coordinates": [-117.237583, 32.880824]
-					    }
-					};
-
-					L.geoJson(sup, {
-					    meow: meow
-					}).addTo(map);
-
-
-	    </script>
-
-
-	    <!-- Wifi Test API Code -->
-
-	    <script type="text/javascript">
-				SomApi.account = "SOM581973ffa2b40"; //your API Key here
-				SomApi.domainName = "wifilyf.herokuapp.com"; //your domain or sub-domain here
-				SomApi.config.sustainTime = 4;
-				SomApi.onTestCompleted = onTestCompleted;
-				SomApi.onError = onError;
-
-				var msgDiv = document.getElementById("msg");
-
-				function btnStartClick() {
-					msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
-					SomApi.startTest();
+			var lc = L.control.locate({
+				strings: {
+					title: "Current Location"
 				}
+			}).addTo(map);
 
-				function onTestCompleted(testResult) {
-					msgDiv.innerHTML =
-					"<h3>"+
-					"Download: " +testResult.download +"Mbps <br/>"+
-					"Upload: " +testResult.upload +"Mbps <br/>"+
-					"Latency: " +testResult.latency +"ms <br/>"+
-					"Jitter: " +testResult.jitter +"ms <br/>"+
-					"Test Server: "+testResult.testServer +"<br/>"+
-					"IP: " +testResult.ip_address +"<br/>"+
-					"Hostname: " +testResult.hostname +"<br/>"+
-					"</h3>";
-				}
 
-				function onError(error) {
-					msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
+			var myLines = [{
+				"type": "LineString",
+				"coordinates": [[-117.237583, 32.880824], [-117.239583, 32.880824]]
+			}, {
+				"type": "LineString",
+				"coordinates": [[32.880824, -117.237583], [32.885824, -117.237583]]
+			}];
+
+			var myStyle = {
+				"color": "#ff7800",
+				"weight": 5,
+				"opacity": 0.65
+			};
+
+			var revelle = {
+				"type": "Feature",
+				"geometry": {
+					"type": "Polygon",
+					"coordinates": [
+						[ [-117.241134, 32.870299], [-117.240172, 32.870787], [-117.239131, 32.871458], [-117.237956, 32.872958]]
+					]
 				}
+			};
+
+
+
+			{{#each Wifi}}
+
+
+			var geojsonFeature = {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [{{coordinates}}]
+				}
+			};
+
+			var geoOption;
+
+			var geojsonFeature1 = {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [-117.237583, 32.880824]
+				}
+			};
+
+			var geojsonFeature2 = {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [-117.241821, 32.885320]
+				}
+			};
+
+
+			// Poor
+			var geojsonMarkerOptions1 = {
+				radius: 40,
+				fillColor: "#f2dede",
+				color: "#000",
+				weight: 1,
+				opacity: 1,
+				fillOpacity: 0.7,
+				clickable: false
+			};
+
+			// Great
+			var geojsonMarkerOptions2 = {
+				radius: 40,
+				fillColor: "#dff0d8",
+				color: "#000",
+				weight: 1,
+				opacity: 1,
+				fillOpacity: 0.7,
+				clickable: false
+			};
+
+			// Average
+			var geojsonMarkerOptions3 = {
+				radius: 40,
+				fillColor: "#fcf8e3",
+				color: "#000",
+				weight: 1,
+				opacity: 1,
+				fillOpacity: 0.7,
+				clickable: false
+			};
+
+			if("{{Connection}}" == "Great"){
+				geoOption = geojsonMarkerOptions2;
+			}
+
+			else if("{{Connection}}" == "Average"){
+				geoOption = geojsonMarkerOptions3;
+			}
+
+			else{
+				geoOption = geojsonMarkerOptions1;
+			}
+
+
+			L.geoJson(geojsonFeature, {
+				pointToLayer: function (feature, latlng) {
+					return L.circleMarker(latlng, geoOption);
+				}
+			}).addTo(map);
+
+
+			{{/each}}
+
+
 			</script>
 
 
-    </div>
-</body>
+			<!-- Wifi Test API Code -->
 
-</html>
+			<script type="text/javascript">
+			SomApi.account = "SOM581973ffa2b40"; //your API Key here
+			SomApi.domainName = "wifilyf.herokuapp.com"; //your domain or sub-domain here
+			SomApi.config.sustainTime = 4;
+			SomApi.onTestCompleted = onTestCompleted;
+			SomApi.onError = onError;
+
+			var msgDiv = document.getElementById("msg");
+
+			function btnStartClick() {
+				msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
+				SomApi.startTest();
+			}
+
+			function onTestCompleted(testResult) {
+				msgDiv.innerHTML =
+				"<h3>"+
+				"Download: " +testResult.download +"Mbps <br/>"+
+				"Upload: " +testResult.upload +"Mbps <br/>"+
+				"Latency: " +testResult.latency +"ms <br/>"+
+				"Jitter: " +testResult.jitter +"ms <br/>"+
+				"Test Server: "+testResult.testServer +"<br/>"+
+				"IP: " +testResult.ip_address +"<br/>"+
+				"Hostname: " +testResult.hostname +"<br/>"+
+				"</h3>";
+			}
+
+			function onError(error) {
+				msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
+			}
+			</script>
+
+
+		</div>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-87205602-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+
+	</html>
