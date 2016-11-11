@@ -382,6 +382,8 @@
 			var x = document.getElementById("result").textContent;
 			var y = JSON.parse(x);
 
+			console.log(y);
+
 			var today = new Date();
 			var dd = today.getDate();
 			var mm = today.getMonth()+1; //January is 0!
@@ -397,6 +399,8 @@
 
 			today = mm+'/'+dd+'/'+yyyy;
 
+			console.log(y);
+
 			var lol = {items: [
 		    {"Latency": testResult.latency},
 		    {"Upload": testResult.upload},
@@ -408,7 +412,7 @@
 		    {"Date": today}
 			]};
 
-			console.log(y);
+			
 			console.log(lol);
 			console.log("Shit is working!");
 
