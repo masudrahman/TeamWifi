@@ -291,7 +291,7 @@
 				console.log("Shit is working!");
 
 				if(speed < 7.86){
-					geoOption = geojsonMarkerOptions2;
+					geoOption = geojsonMarkerOptions1;
 				}
 
 				else if(speed > 7.86 && speed < 10){
@@ -299,7 +299,7 @@
 				}
 
 				else{
-					geoOption = geojsonMarkerOptions1;
+					geoOption = geojsonMarkerOptions2;
 				}
 
 				L.geoJson(newgeojsonFeature, {
