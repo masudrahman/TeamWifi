@@ -57,43 +57,53 @@
 
 							<div class="form-group">
 					      <label for="sel1">Select Wifi Network</label>
-					      <select class="form-control" id="sel1">
-					      	<option>UCSD-PROTECTED</option>
-							    <option>UCSD-GUEST</option>
-							    <option>eduroam</option>
-							    <option>UCSD-DEVICE</option>
-							    <option>RESNET-MUIR-E</option>
-							    <option>RESNET-MUIR</option>
-							    <option>RESNET-SIXTH-E</option>
-							    <option>RESNET-SIXTH</option>
-							    <option>RESNET-ERC-E</option>
-							    <option>RESNET-ERC</option>
-							    <option>RESNET-MARSHALL-E</option>
-							    <option>RESNET-MARSHALL</option>
-							    <option>RESNET-REVELLE-E</option>
-							    <option>RESNET-REVELLE</option>
-							    <option>Private/Other Network</option>
+					      <select class="form-control" name="wifi"id="sel1">
+					      	<option value="UCSD-PROTECTED" >UCSD-PROTECTED</option>
+							    <option value="UCSD-GUEST" >UCSD-GUEST</option>
+							    <option value="eduroam" >eduroam</option>
+							    <option value="UCSD-DEVICE" >UCSD-DEVICE</option>
+							    <option value="RESNET-MUIR-E" >RESNET-MUIR-E</option>
+							    <option value="RESNET-MUIR" >RESNET-MUIR</option>
+							    <option value="RESNET-SIXTH-E" >RESNET-SIXTH-E</option>
+							    <option value="RESNET-SIXTH" >RESNET-SIXTH</option>
+							    <option value="RESNET-ERC-E" >RESNET-ERC-E</option>
+							    <option value="RESNET-ERC" >RESNET-ERC</option>
+							    <option value="RESNET-MARSHALL-E" >RESNET-MARSHALL-E</option>
+							    <option value="RESNET-MARSHALL" >RESNET-MARSHALL</option>
+							    <option value="RESNET-REVELLE-E" >RESNET-REVELLE-E</option>
+							    <option value="RESNET-REVELLE" >RESNET-REVELLE</option>
+							    <option value="Private/Other Network" >Private/Other Network</option>
 					      </select>
-					    </div>
+					    
 
-							<label for="comment">Comment:</label>
-							<input type="text" class="form-control" id="pwd" placeholder="(Optional)">
+								<label for="comment">Comment:</label>
+								<input type="text" class="form-control" id="pwd" name="comments" placeholder="(Optional)">
 
-							<br>
+								<br>
 
-							<p>Personal Speed Rating:</p>
+								<p>Personal Speed Rating:</p>
 
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="alert alert-danger">Slow</button>
-								<button type="button" class="alert alert-warning">Average</button>
-								<button type="button" class="alert alert-success">Great</button>
+								<div class="btn-group" role="group" aria-label="Basic example">
+									<button type="button" class="alert alert-danger">Slow</button>
+									<button type="button" class="alert alert-warning">Average</button>
+									<button type="button" class="alert alert-success">Great</button>
+								</div>
+
+
+
 							</div>
 
+							<button type="button submit" class="btn btn-default" onclick="btnStartClick()">Submit</button>
 						</form>
+
+						<h2>JSON</h2>
+						<p id="result"></p>
+
 					</div>
 
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" onclick="btnStartClick()">Submit</button>
+						
+
 						<div id="msg"></div>
 
 					</div>
@@ -101,6 +111,34 @@
 
 			</div>
 		</div>
+
+
+		<!-- Get JSON data from form in modal -->
+		<script type="text/javascript">
+			$.fn.serializeObject = function()
+			{
+			    var o = {};
+			    var a = this.serializeArray();
+			    $.each(a, function() {
+			        if (o[this.name] !== undefined) {
+			            if (!o[this.name].push) {
+			                o[this.name] = [o[this.name]];
+			            }
+			            o[this.name].push(this.value || '');
+			        } else {
+			            o[this.name] = this.value || '';
+			        }
+			    });
+			    return o;
+			};
+
+			$(function() {
+			    $('form').submit(function() {
+			        $('#result').text(JSON.stringify($('form').serializeObject()));
+			        return false;
+			    });
+			});
+		</script>
 
 
 
@@ -311,6 +349,9 @@
 				}
 				};
 
+				var x = document.getElementById("result");
+
+				console.log(x);
 				console.log("Shit is working!");
 
 				if(speed < 7.86){
