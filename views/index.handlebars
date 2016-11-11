@@ -262,6 +262,8 @@
 			function btnStartClick() {
 				msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
 				SomApi.startTest();
+
+
 			}
 
 			function onTestCompleted(testResult) {
@@ -275,6 +277,26 @@
 				"IP: " +testResult.ip_address +"<br/>"+
 				"Hostname: " +testResult.hostname +"<br/>"+
 				"</h3>";
+
+				var speed = testResult.download;
+
+				if(speed < 7.86){
+					geoOption = geojsonMarkerOptions2;
+				}
+
+				else if(speed > 7.86 && speed < 10){
+					geoOption = geojsonMarkerOptions3;
+				}
+
+				else{
+					geoOption = geojsonMarkerOptions1;
+				}
+
+				L.geoJson(newgeojsonFeature, {
+					pointToLayer: function (feature, latlng) {
+						return L.circleMarker(latlng, geoOption);
+					}
+				}).addTo(map);
 			}
 
 			function onError(error) {
@@ -289,25 +311,7 @@
 				}
 			};
 
-			var speed = testResult.download;
-
-			if(speed < 7.86){
-				geoOption = geojsonMarkerOptions2;
-			}
-
-			else if(speed > 7.86 && speed < 10){
-				geoOption = geojsonMarkerOptions3;
-			}
-
-			else{
-				geoOption = geojsonMarkerOptions1;
-			}
-
-			L.geoJson(newgeojsonFeature, {
-				pointToLayer: function (feature, latlng) {
-					return L.circleMarker(latlng, geoOption);
-				}
-			}).addTo(map);
+			
 
 			</script>
 
