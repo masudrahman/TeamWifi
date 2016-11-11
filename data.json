@@ -1,70 +1,76 @@
 {
   "Wifi": [
     {
-      "Latency": "40 ms" ,
-      "upload": "1.25 mb/s",
-      "download":"7.12 mb/s",
+      "Latency": "40" ,
+      "upload": "1.25",
+      "download":"7.12",
       "location": "Eleanor Roosevelt College",
       "coordinates": [-117.241821, 32.885320],
       "Wifi-Name": "RESNET-ERC-E",
       "User-Comments": "Feels sluggish",
       "User-Rating": "Slow",
-      "Connection": "Average"
+      "Connection": "Average",
+      "Date": "10/15/16"
     },
     {
-      "Latency": "100 ms",
+      "Latency": "100",
       "upload": "0.8 mb/s",
-      "download": "5.40 mb/s",
+      "download": "5.40",
       "location": "Warren College",
       "coordinates": [-117.234640, 32.881459],
       "Wifi-Name": "RESNET-Warren-E",
       "User-Comments": "N/A",
       "User-Rating": "Average",
-      "Connection": "Average"
+      "Connection": "Average",
+      "Date": "10/10/16"
     },
     {
-      "Latency": "246 ms",
-      "upload": "1.3 mb/s",
-      "download":"2.2 mb/s",
+      "Latency": "246",
+      "upload": "1.3",
+      "download":"2.2",
       "location": "Sixth College",
       "coordinates": [-117.232076, 32.879225],
       "Wifi-Name":"UCSD-GUEST",
       "User-Comments": "extremely slow wifi",
       "User-Rating": "Slow",
-      "Connection": "Slow"
+      "Connection": "Slow",
+      "Date": "9/15/16"
     },
     {
-      "Latency": "15 ms",
-      "upload": "20.22 mb/s",
-      "download": "13.50 mb/s",
+      "Latency": "15",
+      "upload": "20.22",
+      "download": "13.50",
       "location": "Muir College",
       "coordinates": [-117.241403, 32.878820],
       "Wifi-Name": "UCSD-PROTECTED",
       "User-Comments": "extremely fast wifi. very satisfied!",
       "User-Rating": "Great",
-      "Connection": "Great"
+      "Connection": "Great",
+      "Date": "9/12/16"
     },
     {
-      "Latency": "50 ms",
-      "upload": "14.25 mb/s",
-      "download": "10.50 mb/s",
+      "Latency": "50",
+      "upload": "14.25",
+      "download": "10.50",
       "location": "Marshall College",
       "coordinates": [-117.240700, 32.882229],
       "Wifi-Name": "UCSD-PROTECTED",
       "User-Comments": "the wifi is okay. no problems",
       "User-Rating": "Average",
-      "Connection": "Great"
+      "Connection": "Great",
+      "Date": "9/11/16"
     },
     {
-      "Latency": "318 ms",
-      "upload": "0.22 mb/s",
-      "download": "2.50 mb/s",
+      "Latency": "318",
+      "upload": "0.22",
+      "download": "2.50",
       "location": "Revelle College",
       "coordinates": [-117.241043, 32.874462],
       "Wifi-Name": "RESNET-Revelle",
       "User-Comments": "unbearably slow wifi. UCSD??!?",
       "User-Rating": "Slow",
-      "Connection": "Slow"
+      "Connection": "Slow",
+      "Date": "8/15/16"
     }
   ]
 }
