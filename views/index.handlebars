@@ -129,6 +129,8 @@
 					    }
 					}).addTo(map);
 
+	        console.log(lc.latlng);
+
 
 	        var myLines = [{
 					    "type": "LineString",
@@ -161,6 +163,16 @@
 					
 					var geojsonFeature = {
 					    "type": "Feature",
+					    "properties": {
+					    		"Latency": "{{Latency}}",
+						      "upload": "{{upload}}",
+						      "download": "{{download}}",
+						      "location": "{{location}}",
+						      "Wifi-Name": "{{Wifi-Name}}",
+						      "User-Comments": "{{User-Comments}}",
+						      "User-Rating": "{{User-Rating}}",
+						      "Connection": "{{Connection}}"
+					    },
 					    "geometry": {
 					        "type": "Point",
 					        "coordinates": [{{coordinates}}]
@@ -184,6 +196,17 @@
 					        "coordinates": [-117.241821, 32.885320]
 					    }
 					};
+
+					function onEachFeature(feature, layer) {
+					    // does this feature have a property named popupContent?
+					    var popupContent = "Sup dude";
+
+					    if(feature.properties && feature.properties.Connection) {
+					        popupContent += feature.properties.Connection;
+					    }
+
+					    layer.bindPopup(popupContent);
+					}
 
 
 					// Poor
@@ -232,14 +255,38 @@
 					}
 
 
-					L.geoJson(geojsonFeature, {
+					var x = L.geoJson(geojsonFeature, {
 					    pointToLayer: function (feature, latlng) {
 					        return L.circleMarker(latlng, geoOption);
 					    }
-					}).addTo(map);
+					}).bindPopup("I am a green leaf.").addTo(map);
 
 
 					{{/each}}
+
+					function meow(feature, layer) {
+					    // does this feature have a property named popupContent?
+					    if (feature.properties && feature.properties.popupContent) {
+					        layer.bindPopup(feature.properties.popupContent);
+					    }
+					}
+
+					var sup = {
+					    "type": "Feature",
+					    "properties": {
+					        "name": "Coors Field",
+					        "amenity": "Baseball Stadium",
+					        "popupContent": "This is where the Rockies play!"
+					    },
+					    "geometry": {
+					        "type": "Point",
+					        "coordinates": [-117.237583, 32.880824]
+					    }
+					};
+
+					L.geoJson(sup, {
+					    meow: meow
+					}).addTo(map);
 
 
 	    </script>
