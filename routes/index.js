@@ -1,7 +1,6 @@
-// Get all of our friend data
+// Get all of our wifi data
 var data = require('../data.json');
 
 exports.view = function(req, res){
-	console.log(data);
 	res.render('index', data);
 };

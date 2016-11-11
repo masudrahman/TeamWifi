@@ -3,7 +3,7 @@
     {
       "Latency": 40,
       "Upload": 1.25,
-      "Download":7.12,
+      "Download": 7.12,
       "Location": "Eleanor Roosevelt College",
       "Coordinates": [-117.241821, 32.885320],
       "Wifi-Name": "RESNET-ERC-E",
@@ -27,7 +27,7 @@
     {
       "Latency": 246,
       "Upload": 1.3,
-      "Download":2.2,
+      "Download": 2.2,
       "Location": "Sixth College",
       "Coordinates": [-117.232076, 32.879225],
       "Wifi-Name":"UCSD-GUEST",

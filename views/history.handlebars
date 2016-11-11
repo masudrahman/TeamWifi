@@ -33,21 +33,27 @@
   <div class="History container">
     <div class="container Date">
       <h1> History </h1>
-      <h3> November 8th 2016</h3>
+
+      {{#each Wifi}}
+
+      <h3> {{ Date }} </h3>
       <div class="info">
         <div class="col-lg-4">
-          <p>Location: Eleanor Roosevelt College</p>
-          <p class="tab"> Speed: 50ms </p>
-          <p class="tab"> Download: 10.80ms </p>
-          <p class="tab"> Upload: 13.15 Mb/s </p>
+          <p> Location: {{ Location }} </p>
+          <p class="tab"> Latency: {{ Latency }} ms </p>
+          <p class="tab"> Download: {{ Download }} Mb/s </p>
+          <p class="tab"> Upload: {{ Upload }} </p>
         </div>
         <div class="col-md-4">
-          <p>Connected to: ERC-E-RESNET</p>
-          <p>Comments: "Felt Sluggish"</p>
-          <p>Connection: Average</p>
-          <p class="tab">Your Rating: Slow</p>
+          <p>Connected to: {{Wifi-Name}} </p>
+          <p>Comments: {{ User-Comments }} </p>
+          <p>Connection: {{ Connection }}</p>
+          <p class="tab">Your Rating: {{User-Rating}} </p>
         </div>
       </div>
+
+      {{/each}}
+
     </div>
   </div>
   <script>
