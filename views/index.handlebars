@@ -55,20 +55,45 @@
 						<h4 class="modal-title">Wifi Speed</h4>
 					</div>
 					<div class="modal-body">
-						<div class="form-group">
+						<form>
+
+							<div class="form-group">
+					      <label for="sel1">Select Wifi Network</label>
+					      <select class="form-control" id="sel1">
+					      	<option>UCSD-PROTECTED</option>
+							    <option>UCSD-GUEST</option>
+							    <option>eduroam</option>
+							    <option>UCSD-DEVICE</option>
+							    <option>RESNET-MUIR-E</option>
+							    <option>RESNET-MUIR</option>
+							    <option>RESNET-SIXTH-E</option>
+							    <option>RESNET-SIXTH</option>
+							    <option>RESNET-ERC-E</option>
+							    <option>RESNET-ERC</option>
+							    <option>RESNET-MARSHALL-E</option>
+							    <option>RESNET-MARSHALL</option>
+							    <option>RESNET-REVELLE-E</option>
+							    <option>RESNET-REVELLE</option>
+							    <option>Private/Other Network</option>
+					      </select>
+					    </div>
+
 							<label for="comment">Comment:</label>
 							<input type="text" class="form-control" id="pwd" placeholder="(Optional)">
-						</div>
 
-						<p>Personal Speed Rating:</p>
+							<br>
 
-						<div class="btn-group" role="group" aria-label="Basic example">
-							<button type="button" class="alert alert-danger">Slow</button>
-							<button type="button" class="alert alert-warning">Average</button>
-							<button type="button" class="alert alert-success">Great</button>
-						</div>
+							<p>Personal Speed Rating:</p>
 
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<button type="button" class="alert alert-danger">Slow</button>
+								<button type="button" class="alert alert-warning">Average</button>
+								<button type="button" class="alert alert-success">Great</button>
+							</div>
+
+						</form>
 					</div>
+
 					<div class="modal-footer">
 						<button type="button" class="btn btn-default" onclick="btnStartClick()">Submit</button>
 						<div id="msg"></div>
