@@ -388,11 +388,11 @@
 			var yyyy = today.getFullYear();
 
 			if(dd<10) {
-			    dd='0'+dd
+			    dd='0'+dd;
 			} 
 
 			if(mm<10) {
-			    mm='0'+mm
+			    mm='0'+mm;
 			} 
 
 			today = mm+'/'+dd+'/'+yyyy;
@@ -405,7 +405,7 @@
 		    {"Wifi-Name": y[0]},
 		    {"User-Comments": y[1]},
 		    {"Connection": conn},
-		    {"Date": mm}
+		    {"Date": today}
 			]};
 
 			console.log(y);
