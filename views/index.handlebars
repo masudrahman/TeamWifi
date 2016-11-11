@@ -280,6 +280,14 @@
 
 				var speed = testResult.download;
 
+				var newgeojsonFeature = {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [currentLng, currentLat]
+				}
+				};
+
 				console.log("Shit is working!");
 
 				if(speed < 7.86){
@@ -305,13 +313,7 @@
 				msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
 			}
 
-			var newgeojsonFeature = {
-				"type": "Feature",
-				"geometry": {
-					"type": "Point",
-					"coordinates": [currentLng, currentLat]
-				}
-			};
+			
 
 			
 
