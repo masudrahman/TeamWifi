@@ -31,9 +31,7 @@
 	<div id="container">
 
 		<div class="card" id="key">
-			<div class="card-header">
-				Key
-			</div>
+			<div class="card-header">Key</div>
 			<div class="card-block">
 				<blockquote class="card-blockquote">
 					<div class="alert alert-danger" role="alert">Slow</div>
@@ -134,7 +132,7 @@
 
         <div id="map"></div>
 
-      
+
 		</div>
 
 		<div id="wifi">
@@ -175,7 +173,7 @@
         .on('locationfound', function(e){
             currentLat = e.latitude;
             currentLng = e.longitude;
-           
+
         })
        .on('locationerror', function(e){
             console.log(e);
@@ -265,13 +263,13 @@
 					return L.circleMarker(latlng, geoOption);
 				}
 			}).addTo(map);
-		
+
 
 
 			{{/each}}
 
 
-			
+
 
 
 			 //Wifi Test API Code
@@ -338,9 +336,9 @@
 				msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
 			}
 
-			
 
-			
+
+
 
 			</script>
 
