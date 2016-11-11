@@ -146,7 +146,7 @@
 
 
 			// Return coordinates of current locations
-			map.locate({setView: true, watch: true}) /* This will return map so you can do chaining */
+			map.locate() /* This will return map so you can do chaining */
         .on('locationfound', function(e){
             currentLat = e.latitude;
             currentLng = e.longitude;
@@ -166,7 +166,7 @@
 				"type": "Feature",
 				"geometry": {
 					"type": "Point",
-					"coordinates": [{{coordinates}}]
+					"coordinates": [{{Coordinates}}]
 				}
 			};
 
