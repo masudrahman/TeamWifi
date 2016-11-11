@@ -1,5 +1,5 @@
 <html>
-
+<title> login </title>
 <head>
   <link rel="stylesheet" type="text/css" href="./css/login.css"></head>
 
@@ -14,8 +14,8 @@
 
   <div class="login-page">
     <div class="form">
+      <img src="/images/WiFinder.png" alt="HTML5 Icon" style="width:150px; height:150px">
       <form name="login">
-        <img src="/images/WiFinder.png" alt="HTML5 Icon" style="width:150px; height:150px">
         Username<input type="text" name="userid"/>
         Password<input type="password" name="pswrd"/>
         <input type="button" onclick="check(this.form)" value="Login"/>
@@ -26,7 +26,7 @@
         /*the following code checkes whether the entered userid and password are matching*/
         if(form.userid.value == "cogs120" && form.pswrd.value == "cogs120")
         {
-          window.open('/index')/*opens the target page while Id & password matches*/
+          window.location.href = "http://wifindersd.heroku.com/index"/*opens the target page while Id & password matches*/
         }
         else
         {
