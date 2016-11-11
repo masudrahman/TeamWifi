@@ -39,22 +39,20 @@
       <h3> {{ Date }} </h3>
       <div class="info">
         <div class="col-lg-4">
-          <p> Location: {{ Location }} </p>
+          <p> Location: {{ Coordinates }} </p>
           <p class="tab"> Latency: {{ Latency }} ms </p>
           <p class="tab"> Download: {{ Download }} Mb/s </p>
           <p class="tab"> Upload: {{ Upload }} </p>
         </div>
         <div class="col-md-4">
           <p>Connected to: {{Wifi-Name}} </p>
-          <p>Comments: {{ User-Comments }} </p>
           <p>Connection: {{ Connection }}</p>
           <p class="tab">Your Rating: {{User-Rating}} </p>
+          <p class="tab">Comments: {{ User-Comments }} </p>
         </div>
-        <br>
       </div>
     </div>
     <br>
-
       {{/each}}
 
     </div>
