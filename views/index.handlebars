@@ -397,17 +397,19 @@
 
 			today = mm+'/'+dd+'/'+yyyy;
 
-			y.items.push(
+			var lol = {items: [
 		    {"Latency": testResult.latency},
 		    {"Upload": testResult.upload},
 		    {"Download": testResult.download},
 		    {"Coordinates": [currentLng, currentLat]},
+		    {"Wifi-Name": y[0]},
+		    {"User-Comments": y[1]},
 		    {"Connection": conn},
 		    {"Date": today}
-			);
+			]};
 
 
-			console.log(y);
+			console.log(lol);
 			console.log("Shit is working!");
 
 			</script>
