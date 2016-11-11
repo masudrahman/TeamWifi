@@ -15,22 +15,22 @@ body {
 }
 
 .col-lg-4{
-  background: #ECF0F1;
+  white-space: nowrap;
 }
 
 .btn-group{
   float: right;
-  padding-right: 100px;
+  padding-right: 10em;
 }
 
 .col-md-4{
-  background: #ECF0F1;
+    white-space: nowrap;
 }
 
 .newline{
   display: inline-block;
   width: 150%;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 
