@@ -143,6 +143,7 @@
 			}).addTo(map);
 
 
+
 			// Return coordinates of current locations
 			map.locate() /* This will return map so you can do chaining */
         .on('locationfound', function(e){
@@ -154,7 +155,6 @@
             console.log(e);
             alert("Location access denied.");
         });
-
 
 
 			{{#each Wifi}}
@@ -239,10 +239,11 @@
 				}
 			}).addTo(map);
 
-
-
 			{{/each}}
+			
 
+			var marker1 = L.marker(new L.LatLng(32.880824, -117.237583)).addTo(map);
+			marker1.bindPopup("my tooltip text");
 
 
 
