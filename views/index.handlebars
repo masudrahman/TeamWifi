@@ -89,6 +89,14 @@
 									<button type="button" class="alert alert-success">Great</button>
 								</div>
 
+								<pre id="result"></pre>
+
+								<script type="text/javascript">
+									var x = document.getElementById("result").textContent;
+									var y = JSON.parse(x);
+
+									console.log(y);
+								</script>
 
 
 							</div>
@@ -372,48 +380,51 @@
 						return L.circleMarker(latlng, geoOption);
 					}
 				}).addTo(map);
+
+				var x = document.getElementById("result").textContent;
+				var y = JSON.parse(x);
+				console.log(y);
+
+				var today = new Date();
+			var dd = today.getDate();
+				var mm = today.getMonth()+1; //January is 0!
+				var yyyy = today.getFullYear();
+
+				if(dd<10) {
+				    dd='0'+dd;
+				} 
+
+				if(mm<10) {
+				    mm='0'+mm;
+				} 
+	 
+				today = mm+'/'+dd+'/'+yyyy;
+
+				//console.log(y); 
+
+				var lol = {items: [
+			    {Latency: "testResult.latency"},
+			    {"Upload": testResult.upload},
+			    {"Download": testResult.download},
+			    {"Coordinates": [currentLng, currentLat]},
+			    {"Wifi-Name": y[0]},
+			    {"User-Comments": y[1]},
+			    {"Connection": conn},
+			    {"Date": today}
+				]};
+
+				
+				console.log(lol);
+				console.log("Shit is working!");
+
+
 			}
 
 			function onError(error) {
 				msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
 			}
 
-			var x = document.getElementById("result").textContent;
-		//	var y = JSON.parse(x);
-			console.log(x);
-
-		//	var today = new Date();
-/*			var dd = today.getDate();
-			var mm = today.getMonth()+1; //January is 0!
-			var yyyy = today.getFullYear();
-
-			if(dd<10) {
-			    dd='0'+dd;
-			} 
-
-			if(mm<10) {
-			    mm='0'+mm;
-			} 
- */
-//			today = mm+'/'+dd+'/'+yyyy;
-
-		//	console.log(y); 
-
-		//	var lol = {items: [
-		  //  {Latency: "testResult.latency"},
-		   // {"Upload": testResult.upload},
-		    //{"Download": testResult.download},
-		    //{"Coordinates": [currentLng, currentLat]},
-		    //{"Wifi-Name": y[0]},
-		    //{"User-Comments": y[1]},
-		    //{"Connection": conn},
-		    //{"Date": today}
-		//	]};
-
 			
-			//console.log(x);
-			console.log("Shit is working!");
-
 			</script>
 
 
