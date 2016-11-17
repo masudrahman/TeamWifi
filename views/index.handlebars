@@ -217,6 +217,7 @@
             alert("Location access denied.");
         });
 
+       	var myIcon = L.divIcon({className: 'my-div-icon'});
 
 			{{#each Wifi}}
 
@@ -256,7 +257,7 @@
 				weight: 1,
 				opacity: 1,
 				fillOpacity: 0.7,
-				clickable: false
+				icon: myIcon
 			};
 
 			// Great
@@ -267,7 +268,7 @@
 				weight: 1,
 				opacity: 1,
 				fillOpacity: 0.7,
-				clickable: false
+				icon: myIcon
 			};
 
 			// Average
@@ -278,7 +279,7 @@
 				weight: 1,
 				opacity: 1,
 				fillOpacity: 0.7,
-				clickable: false
+				icon: myIcon
 			};
 
 			if("{{Connection}}" == "Great"){
@@ -294,11 +295,19 @@
 			}
 
 
-			L.geoJson(geojsonFeature, {
+
+		
+
+
+			var loc = L.geoJson(geojsonFeature, {
 				pointToLayer: function (feature, latlng) {
 					return L.circleMarker(latlng, geoOption);
+					//return L.circleMarker(latlng, {icon: myIcon});
+
 				}
 			}).addTo(map);
+			
+			loc.bindPopup("Latency: {{Latency}}<br>Download: {{Download}}<br>Upload: {{Upload}}<br>Wifi-Name: {{Wifi-Name}}<br>User-Comments: {{User-Comments}}<br>User-Rating: {{User-Rating}}<br>Date: {{Date}}<br>");
 
 			{{/each}}
 			
