@@ -96,6 +96,17 @@
 									var y = JSON.parse(x);
 
 									console.log(y);
+
+									var txtFile = "test.json";
+									var file = new File(txtFile,"write");
+									var str = JSON.stringify(x);
+
+									log("opening file...");
+									file.open(); 
+									log("writing file..");
+									file.writeline(str);
+									file.close();
+
 								</script>
 
 
@@ -403,10 +414,10 @@
 				//console.log(y); 
 
 				var lol = {items: [
-			    {Latency: "testResult.latency"},
-			    {"Upload": testResult.upload},
+					{"Coordinates": [currentLng, currentLat]},
+			    {"Latency": testResult.latency},
 			    {"Download": testResult.download},
-			    {"Coordinates": [currentLng, currentLat]},
+			    {"Upload": testResult.upload},
 			    {"Wifi-Name": y[0]},
 			    {"User-Comments": y[1]},
 			    {"Connection": conn},
