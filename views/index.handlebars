@@ -91,25 +91,6 @@
 
 								<pre id="result"></pre>
 
-								<script type="text/javascript">
-									var x = document.getElementById("result").textContent;
-									var y = JSON.parse(x);
-
-									console.log(y);
-
-									var txtFile = "test.json";
-									var file = new File(txtFile,"write");
-									var str = JSON.stringify(x);
-
-									log("opening file...");
-									file.open(); 
-									log("writing file..");
-									file.writeline(str);
-									file.close();
-
-								</script>
-
-
 							</div>
 
 							<button type="button submit" class="btn btn-default" onclick="btnStartClick()">Submit</button>
@@ -395,6 +376,17 @@
 				var x = document.getElementById("result").textContent;
 				var y = JSON.parse(x);
 				console.log(y);
+
+				var txtFile = "test.json";
+				var file = new File(txtFile,"write");
+				var str = JSON.stringify(x);
+
+				log("opening file...");
+				file.open(); 
+				log("writing file..");
+				file.writeline(str);
+				file.close();
+
 
 				var today = new Date();
 			var dd = today.getDate();
