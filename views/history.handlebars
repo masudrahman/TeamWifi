@@ -43,10 +43,12 @@
     <div class="container Date">
       <h1> History </h1>
 
-      <h2 id="fooHolder"></h2>
+  <!--    <h2 id="fooHolder"></h2>
 
-      <h3 id="hi"></h3>
+      <h3 id="hi"></h3> -->
 
+
+      <div id="lahmar"></div>
 
       {{#each Wifi}}
       <div class="newline">
@@ -80,8 +82,29 @@
     console.log(x);
     console.log(y);
 
+    var z = '<div class="newline">
+      <h3> 'y.items[5]' </h3>
+      <div class="info">
+        <div class="col-lg-4">
+          <p> Location: 'y.items[0]' </p>
+          <p class="tab"> Latency: 'y.items[1]' ms </p>
+          <p class="tab"> Download: 'y.items[2]' Mb/s </p>
+          <p class="tab"> Upload: 'y.items[3]' </p>
+        </div>
+        <div class="col-md-4">
+          <p>Connected to: {{Wifi-Name}} </p>
+          <p>Connection: 'y.items[4]' </p>
+          <p class="tab">Your Rating: {{User-Rating}} </p>
+          <p class="tab">Comments: {{ User-Comments }} </p>
+        </div>
+      </div>
+    </div>
+    <br>';
+
     document.getElementById("fooHolder").innerHTML = JSON.stringify(x);
-    document.getElementById("hi").innerHTML = JSON.stringify(y[0]);
+    document.getElementById("hi").innerHTML = JSON.stringify(y.items[0]);
+
+    document.getElementById("lahmar").innerHTML = z;
 
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
