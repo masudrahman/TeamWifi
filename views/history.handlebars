@@ -82,24 +82,7 @@
     console.log(x);
     console.log(y);
 
-    var z = '<div class="newline">
-      <h3> 'y.items[5]' </h3>
-      <div class="info">
-        <div class="col-lg-4">
-          <p> Location: 'y.items[0]' </p>
-          <p class="tab"> Latency: 'y.items[1]' ms </p>
-          <p class="tab"> Download: 'y.items[2]' Mb/s </p>
-          <p class="tab"> Upload: 'y.items[3]' </p>
-        </div>
-        <div class="col-md-4">
-          <p>Connected to: {{Wifi-Name}} </p>
-          <p>Connection: 'y.items[4]' </p>
-          <p class="tab">Your Rating: {{User-Rating}} </p>
-          <p class="tab">Comments: {{ User-Comments }} </p>
-        </div>
-      </div>
-    </div>
-    <br>';
+    var z = '<div class="newline"><h3> '+y.items[5]+' </h3><div class="info"><div class="col-lg-4"><p> Location: '+y.items[0]+' </p><p class="tab"> Latency: '+y.items[1]+' ms </p><p class="tab"> Download: '+y.items[2]+' Mb/s </p><p class="tab"> Upload: '+y.items[3]+' </p></div><div class="col-md-4"><p>Connected to: {{Wifi-Name}} </p><p>Connection: '+y.items[4]+' </p><p class="tab">Your Rating: {{User-Rating}} </p><p class="tab">Comments: {{ User-Comments }} </p></div></div></div><br>';
 
     document.getElementById("fooHolder").innerHTML = JSON.stringify(x);
     document.getElementById("hi").innerHTML = JSON.stringify(y.items[0]);
