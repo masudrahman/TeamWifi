@@ -391,11 +391,11 @@
 				var file = new File(txtFile,"write");
 				var str = JSON.stringify(x);
 
-				log("opening file...");
+		/*		log("opening file...");
 				file.open(); 
 				log("writing file..");
 				file.writeline(str);
-				file.close();
+				file.close();*/
 
 
 				var today = new Date();
@@ -433,7 +433,7 @@
 					}
 				}).addTo(map);
 
-				//bruh.bindPopup("Latency: " + testResult.latency + "<br>Download: " + testResult.download + "<br>Upload: " + testResult.upload + "<br>Wifi-Name: " + y[0] + "<br>User-Comments: " + y[1] + "<br>User-Rating: " + y[2]  + "<br>Date: " + today);
+				bruh.bindPopup("Latency: " + testResult.latency + "<br>Download: " + testResult.download + "<br>Upload: " + testResult.upload + "<br>Wifi-Name: " + y[0] + "<br>User-Comments: " + y[1] + "<br>User-Rating: " + y[2]  + "<br>Date: " + today);
 				
 				console.log(lol);
 				console.log("Shit is working!");

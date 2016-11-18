@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"l",
+				"li	Tag"
+			],
+			[
 				"o",
 				"option	Tag"
 			],
@@ -46,10 +50,6 @@
 			[
 				"on",
 				"onEachFeature"
-			],
-			[
-				"l",
-				"label	Tag"
 			],
 			[
 				"fo",
@@ -199,7 +199,7 @@
 			"file": "views/index.handlebars",
 			"settings":
 			{
-				"buffer_size": 11951,
+				"buffer_size": 12325,
 				"line_ending": "Unix"
 			}
 		},
@@ -403,7 +403,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"",
@@ -418,6 +418,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Download",
+			"Down",
+			"pointTo",
+			"marker1",
 			"//",
 			"result",
 			"<option>",
@@ -541,11 +545,7 @@
 			"team-mem",
 			"img",
 			"mohammed",
-			"clear",
-			"row",
-			"clearfix",
-			"3",
-			"generic"
+			"clear"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -563,7 +563,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -606,8 +606,8 @@
 						"selection":
 						[
 							[
-								399,
-								399
+								1316,
+								1320
 							]
 						],
 						"settings":
@@ -627,15 +627,15 @@
 					"file": "views/index.handlebars",
 					"settings":
 					{
-						"buffer_size": 11951,
+						"buffer_size": 12325,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11147,
-								11147
+								9032,
+								9032
 							]
 						],
 						"settings":
@@ -645,7 +645,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5681.0,
+						"translation.y": 4431.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
