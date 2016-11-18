@@ -57,7 +57,7 @@
 
 							<div class="form-group">
 					      <label for="sel1">Select Wifi Network</label>
-					      <select class="form-control" name="wifi"id="sel1">
+					      <select class="form-control" name="Wifi-Name"id="sel1">
 					      	<option value="UCSD-PROTECTED" >UCSD-PROTECTED</option>
 							    <option value="UCSD-GUEST" >UCSD-GUEST</option>
 							    <option value="eduroam" >eduroam</option>
@@ -77,16 +77,22 @@
 					    
 
 								<label for="comment">Comment:</label>
-								<input type="text" class="form-control" id="pwd" name="comments" placeholder="(Optional)">
+								<input type="text" class="form-control" id="pwd" name="User-Comments" placeholder="(Optional)">
 
 								<br>
 
 								<p>Personal Speed Rating:</p>
 
-								<div class="btn-group" role="group" aria-label="Basic example">
-									<button type="button" class="alert alert-danger">Slow</button>
-									<button type="button" class="alert alert-warning">Average</button>
-									<button type="button" class="alert alert-success">Great</button>
+								<div class="btn-group" data-toggle="buttons">
+								  <label class="btn btn-danger">
+								    <input type="radio" name="User-Rating" id="Slow" autocomplete="off"> Slow
+								  </label>
+								  <label class="btn btn-warning">
+								    <input type="radio" name="User-Rating" id="Average" autocomplete="off"> Average
+								  </label>
+								  <label class="btn btn-success">
+								    <input type="radio" name="User-Rating" id="Great" autocomplete="off"> Great
+								  </label>
 								</div>
 
 								<pre id="result"></pre>
@@ -376,11 +382,6 @@
 					conn = "Great";
 				}
 
-				L.geoJson(newgeojsonFeature, {
-					pointToLayer: function (feature, latlng) {
-						return L.circleMarker(latlng, geoOption);
-					}
-				}).addTo(map);
 
 				var x = document.getElementById("result").textContent;
 				var y = JSON.parse(x);
@@ -425,6 +426,14 @@
 			    {"Date": today}
 				]};
 
+
+				var bruh = L.geoJson(newgeojsonFeature, {
+					pointToLayer: function (feature, latlng) {
+						return L.circleMarker(latlng, geoOption);
+					}
+				}).addTo(map);
+
+				bruh.bindPopup("Latency: " + testResult.latency + "<br>Download: " + testResult.download + "<br>Upload: " + testResult.upload + "<br>Wifi-Name: " + y[0] + "<br>User-Comments: " + y[1] + "<br>User-Rating: " + y[2]  + "<br>Date: " + today);
 				
 				console.log(lol);
 				console.log("Shit is working!");
