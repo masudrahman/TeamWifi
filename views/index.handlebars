@@ -86,13 +86,13 @@
 
 								<div class="btn-group" data-toggle="buttons">
 								  <label class="btn btn-danger">
-								    <input type="radio" name="User-Rating" id="Slow" autocomplete="off"> Slow
+								    <input type="radio" name="User-Rating" value="Slow"> Slow
 								  </label>
 								  <label class="btn btn-warning">
-								    <input type="radio" name="User-Rating" id="Average" autocomplete="off"> Average
+								    <input type="radio" name="User-Rating" value="Average"> Average
 								  </label>
 								  <label class="btn btn-success">
-								    <input type="radio" name="User-Rating" id="Great" autocomplete="off"> Great
+								    <input type="radio" name="User-Rating" value="Great"> Great
 								  </label>
 								</div>
 
@@ -434,7 +434,7 @@
 					}
 				}).addTo(map);
 
-				bruh.bindPopup("Latency: " + testResult.latency + "<br>Download: " + testResult.download + "<br>Upload: " + testResult.upload + "<br>Wifi-Name: " + y[0] + "<br>User-Comments: " + y[1] + "<br>User-Rating: " + y[2]  + "<br>Date: " + today);
+				bruh.bindPopup("Latency: " + testResult.latency + "<br>Download: " + testResult.download + "<br>Upload: " + testResult.upload + "<br>Wifi-Name: " + String(y[0]) + "<br>User-Comments: " + String(y[1]) + "<br>User-Rating: " + String(y[2])  + "<br>Date: " + today);
 				
 				console.log(lol);
 				console.log("Shit is working!");
