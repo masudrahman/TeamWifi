@@ -42,6 +42,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', login.view);
 app.get('/index', index.view);
+app.get('/altindex', index.view2);
 app.get('/faq', faq.view);
 app.get('/history', history.viewHistory);
 app.get('/settings', settings.view);

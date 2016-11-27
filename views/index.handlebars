@@ -60,7 +60,12 @@
 					</div>
 					<div class="modal-body">
 						<form>
+
+							{{#if view2}}
+							<h3 style="color:red;"> Your current location is required in order to check your Wifi Speed.</h3>
+							{{else}}
 							<h3 style="color:red;"> Please make sure the locator icon, on the top left of your screen, is turned on. </h3>
+							{{/if}}
 
 							<div class="form-group">
 					      <label for="sel1">Select Wifi Network</label>
@@ -227,15 +232,13 @@
 			  a.setAttribute('download', filename);
 			  a.click()
 			}
-
 		
-
-
 			// Return coordinates of current locations
 			map.locate() /* This will return map so you can do chaining */
         .on('locationfound', function(e){
             currentLat = e.latitude;
             currentLng = e.longitude;
+            sendInfo();
 
         })
        .on('locationerror', function(e){
@@ -243,7 +246,26 @@
             alert("Location access denied.");
         });
 
-       	var myIcon = L.divIcon({className: 'my-div-icon'});
+     	var myIcon = L.divIcon({className: 'my-div-icon'});
+     	var geoOption;
+			var poor, average, great;
+			var fillop;
+
+
+
+
+			// Two different circle colors for A/B testing
+			{{#if view2}}
+				poor = "#f2dede";
+				average = "#fcf8e3";
+				great = "#dff0d8";
+				fillop = 0.7;
+			{{else}}
+				poor = "#d9534f";
+				average = "#f0ad4e";
+				great = "#5cb85c";
+				fillop = 0.5;
+			{{/if}}
 
 			{{#each Wifi}}
 
@@ -254,57 +276,39 @@
 					"type": "Point",
 					"coordinates": [{{Coordinates}}]
 				}
-			};
-
-			var geoOption;
-
-			var geojsonFeature1 = {
-				"type": "Feature",
-				"geometry": {
-					"type": "Point",
-					"coordinates": [-117.237583, 32.880824]
-				}
-			};
-
-			var geojsonFeature2 = {
-				"type": "Feature",
-				"geometry": {
-					"type": "Point",
-					"coordinates": [-117.241821, 32.885320]
-				}
-			};
+			};			
 
 
 			// Poor
 			var geojsonMarkerOptions1 = {
 				radius: 40,
-				fillColor: "#d9534f",
+				fillColor: poor,
 				color: "#000",
 				weight: 1,
 				opacity: 1,
-				fillOpacity: 0.5,
+				fillOpacity: fillop,
 				icon: myIcon
 			};
 
 			// Great
 			var geojsonMarkerOptions2 = {
 				radius: 40,
-				fillColor: "#5cb85c",
+				fillColor: great,
 				color: "#000",
 				weight: 1,
 				opacity: 1,
-				fillOpacity: 0.5,
+				fillOpacity: fillop,
 				icon: myIcon
 			};
 
 			// Average
 			var geojsonMarkerOptions3 = {
 				radius: 40,
-				fillColor: "#f0ad4e",
+				fillColor: average,
 				color: "#000",
 				weight: 1,
 				opacity: 1,
-				fillOpacity: 0.5,
+				fillOpacity: fillop,
 				icon: myIcon
 			};
 
@@ -488,7 +492,7 @@
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-87205602-1', 'auto');
+		  ga('create', 'UA-88067361-1', 'auto');
 		  ga('send', 'pageview');
 
 		</script>
