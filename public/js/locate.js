@@ -9,7 +9,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 
 function sendInfo() {
 	console.log("------LOCATION FOUND-------");
-	ga('send', 'event', 'like', 'click');
+	ga('send', 'event', 'location', 'click');
 }
 
 (function (factory, window) {
