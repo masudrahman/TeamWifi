@@ -103,7 +103,7 @@
 								  </label>
 								</div>
 
-								<pre id="result" style="color: white;"></pre>
+							<!--	<pre id="result" ></pre> -->
 
 							</div>
 
@@ -147,7 +147,7 @@
 
 			$(function() {
 			    $('form').submit(function() {
-			        $('#result').text(JSON.stringify($('form').serializeObject()));
+			        //$('#result').text(JSON.stringify($('form').serializeObject()));
 
 			        Cookies.set('name', JSON.stringify($('form').serializeObject()));
 			        return false;
@@ -338,10 +338,18 @@
 
 			{{/each}}
 
-//var a = document.getElementById("result").textContent;
-	//		var b = JSON.parse(b);
+			//var res = document.getElementById("result").textContent;
+			//var resultContent = JSON.parse(res);
 
-		//	console.log(b);
+			
+			//console.log(res);
+
+			
+
+
+			//var b = JSON.parse(b);
+
+			
 			
 			
 
@@ -365,6 +373,30 @@
 				msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
 				SomApi.startTest();
 
+		/*		var tester = {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [-117.235770, 32.874796]
+				}
+			};
+
+			var gg = L.geoJson(tester, {
+				pointToLayer: function (feature, latlng) {
+					return L.circleMarker(latlng, geoOption);
+					//return L.circleMarker(latlng, {icon: myIcon});
+
+				}
+			}).addTo(map); 
+
+			//var res = document.getElementById("result").textContent;
+			//var resultContent = JSON.parse(res);
+
+		 	z = JSON.stringify($('form').serializeObject());
+			h = JSON.parse(z);
+			console.log(h);
+				
+			gg.bindPopup("Wifi-Name: " + h["Wifi-Name"] + "<br>User-Comments: " + h["User-Comments"] + "<br>User-Rating: " + h["User-Rating"] + "<br>Date: {{Date}}<br>"); */
 
 			}
 
@@ -411,11 +443,8 @@
 
 				// Beginning of JSON output data
 
-				var x = document.getElementById("result").textContent;
-				var y = JSON.parse(x);
+				
 
-
-				console.log(y);
 
 				var txtFile = "test.json";
 			//	var file = new File(txtFile,"write");
@@ -427,6 +456,9 @@
 				log("writing file..");
 				file.writeline(str);
 				file.close();*/
+
+				result = JSON.stringify($('form').serializeObject());
+				resultContent = JSON.parse(result);
 
 
 				var today = new Date();
@@ -452,7 +484,10 @@
 			    {"Download": testResult.download},
 			    {"Upload": testResult.upload},
 			    {"Connection": conn},
-			    {"Date": today}
+			    {"Date": today},
+			    {"Wifi-Name": resultContent["Wifi-Name"]},
+			    {"User-Comments": resultContent["User-Comments"]},
+			    {"User-Rating": resultContent["User-Rating"]}
 				]};
 
 				Cookies.set('swag', lol);
@@ -464,11 +499,8 @@
 					}
 				}).addTo(map);
 
-				bruh.bindPopup("Latency: " + testResult.latency + " ms<br>Download: " + testResult.download + " Mbps<br>Upload: " + testResult.upload + " Mbps<br>Wifi-Name: " + "UCSD-Protected" + "<br>User-Comments: " + "Good" + "<br>User-Rating: " + "Average" + "<br>Date: " + today);
+				bruh.bindPopup("Latency: " + testResult.latency + " ms<br>Download: " + testResult.download + " Mbps<br>Upload: " + testResult.upload + " Mbps<br>Wifi-Name: " + resultContent["Wifi-Name"] + "<br>User-Comments: " + resultContent["User-Comments"] + "<br>User-Rating: " + resultContent["User-Rating"] + "<br>Date: " + today);
 				
-
-				console.log(lol);
-				console.log("Shit is working!");
 
 
 			}

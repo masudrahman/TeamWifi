@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"view",
+				"view2"
+			],
+			[
 				"Coo",
 				"Coordinates"
 			],
@@ -191,7 +195,7 @@
 			"file": "views/index.handlebars",
 			"settings":
 			{
-				"buffer_size": 13302,
+				"buffer_size": 14590,
 				"line_ending": "Unix"
 			}
 		},
@@ -209,7 +213,7 @@
 			"file": "routes/index.js",
 			"settings":
 			{
-				"buffer_size": 130,
+				"buffer_size": 245,
 				"line_ending": "Unix"
 			}
 		},
@@ -218,6 +222,46 @@
 			"settings":
 			{
 				"buffer_size": 4247,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1456,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/faq.handlebars",
+			"settings":
+			{
+				"buffer_size": 3465,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/login.handlebars",
+			"settings":
+			{
+				"buffer_size": 1633,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/settings.handlebars",
+			"settings":
+			{
+				"buffer_size": 3168,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/locate.js",
+			"settings":
+			{
+				"buffer_size": 21912,
 				"line_ending": "Unix"
 			}
 		}
@@ -270,6 +314,8 @@
 	},
 	"file_history":
 	[
+		"/Users/masudrahman/Code/IntroHCI/lab7/views/index.handlebars",
+		"/Users/masudrahman/Code/IntroHCI/lab7/routes/index.js",
 		"/Users/masudrahman/Code/TeamWifi/data.json",
 		"/Users/masudrahman/Code/TeamWifi/views/login.handlebars",
 		"/Users/masudrahman/Code/TeamWifi/public/js/js.cookie.js",
@@ -395,9 +441,7 @@
 		"/Users/masudrahman/Code/marine-v1.0/HTML/page-services.html",
 		"/Users/masudrahman/Code/marine-v1.0/HTML/index-corporation.html",
 		"/Users/masudrahman/Code/marine-v1.0/HTML/blog-big-image.html",
-		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/content.php",
-		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/sidebar.php",
-		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/page.php"
+		"/Users/masudrahman/Code/wordpress/wp-content/themes/startwordpress/content.php"
 	],
 	"find":
 	{
@@ -420,6 +464,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"result",
+			"key",
+			"oncli",
+			"click",
+			"L.Control.",
+			"event",
+			"locationfound",
+			"fillOpacity",
 			"rating",
 			"btn-",
 			"y.items",
@@ -539,15 +591,7 @@
 			"insert",
 			"obj_num",
 			"Obj_number",
-			"<div",
-			"<div>",
-			"get_fl",
-			"books",
-			"title",
-			"index",
-			"digital",
-			"clear",
-			"img"
+			"<div"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -565,7 +609,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -573,15 +617,15 @@
 					"file": "views/index.handlebars",
 					"settings":
 					{
-						"buffer_size": 13302,
+						"buffer_size": 14590,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11368,
-								11368
+								5889,
+								5889
 							]
 						],
 						"settings":
@@ -591,7 +635,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6016.0,
+						"translation.y": 1706.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1898,7 +1942,7 @@
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 66495.0,
+						"translation.y": 25740.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1908,15 +1952,15 @@
 					"file": "routes/index.js",
 					"settings":
 					{
-						"buffer_size": 130,
+						"buffer_size": 245,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								99,
-								99
+								199,
+								199
 							]
 						],
 						"settings":
@@ -1941,8 +1985,8 @@
 						"selection":
 						[
 							[
-								3210,
-								3210
+								4222,
+								4226
 							]
 						],
 						"settings":
@@ -1952,7 +1996,143 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 611.0,
+						"translation.y": 996.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 1456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1163,
+								1163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 81.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "views/faq.handlebars",
+					"settings":
+					{
+						"buffer_size": 3465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3454,
+								3454
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 246.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views/login.handlebars",
+					"settings":
+					{
+						"buffer_size": 1633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1201,
+								1201
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 21.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "views/settings.handlebars",
+					"settings":
+					{
+						"buffer_size": 3168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3147,
+								3147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/js/locate.js",
+					"settings":
+					{
+						"buffer_size": 21912,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
